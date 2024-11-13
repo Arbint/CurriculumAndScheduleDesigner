@@ -1,3 +1,7 @@
+# Technical Details:
+* Versions:
+    - Python: 3.10.15
+
 # Corriculum Designer
 ## Features
 * Allow Importing and Saving of Classe collections
