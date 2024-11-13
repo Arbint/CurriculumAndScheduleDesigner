@@ -11,4 +11,4 @@
 * Save to CSV
 * View Online
 
-# Sceduler
+# Scheduler
