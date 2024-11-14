@@ -1,6 +1,9 @@
 from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QVBoxLayout, QListWidget, QListWidgetItem, QGridLayout, QPushButton, QLabel
-from PySide6.QtGui import QAction
+from PySide6.QtGui import QAction, QDragEnterEvent, QDragMoveEvent
+from PySide6.QtCore import Qt
 import CurriculumDesigner
+from DraggableListWidget import DraggeableListWidget
+
 
 class EntryListWidget(QWidget):
     def __init__(self, title: str):
@@ -9,8 +12,9 @@ class EntryListWidget(QWidget):
         self.setLayout(self.masterLayout)
         listLabel = QLabel(title)
         self.masterLayout.addWidget(listLabel)
-        self.listWidget = QListWidget()
+        self.listWidget = DraggeableListWidget()
         self.masterLayout.addWidget(self.listWidget)
+        self.listWidget.addItem("sdfdsf")
 
 class CurriculumnDesignerWindow(QMainWindow):
     def __init__(self):
