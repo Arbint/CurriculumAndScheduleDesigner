@@ -1,4 +1,5 @@
 from Course import Course
+from PySide6.QtCore import QAbstractListModel, Qt
 
 class CurriculumDesigner:
     def __init__(self):
@@ -15,4 +16,3 @@ class CurriculumDesigner:
 
         return courses
 
-    
