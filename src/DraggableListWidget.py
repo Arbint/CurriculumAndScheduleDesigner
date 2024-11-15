@@ -16,21 +16,12 @@ class DraggeableListWidget(QListWidget):
 
     def dragEnterEvent(self, event: QDragEnterEvent) -> None:
         print(f"dragging enter!")
-        if event.mimeData().hasText():
-            print(f"dragging accepted!")
-            event.accept()
-        else:
-            print(f"dragging rejected!")
-            event.ignore()
+        event.accept()
 
     def dragMoveEvent(self, event: QDragMoveEvent) -> None:
         print(f"dragging moving evnet!!")
         event.accept()
         
     def dropEvent(self, event):
-        print(f"dropping event: {event}")
-        if event.mimeData().hasText():
-            text = event.mimeData().text()
-            self.addItem(text)
-        else:
-            event.ignore()
+        self.addItem("hahah")
+        event.setDropAction(Qt.MoveAction)
