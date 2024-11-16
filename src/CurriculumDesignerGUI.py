@@ -32,13 +32,18 @@ class CurriculumnDesignerWindow(QMainWindow):
         self.centerMasterLayout = QHBoxLayout()
         self.setCentralWidget(QWidget())
         self.centralWidget().setLayout(self.centerMasterLayout)
-        self.ConfigureSemesterLayout()
-
         self.ConfigureClassList()
+        self.ConfigureSemesterLayout()
+        self.ConfigureFinishedClassList()
+
+
+    def ConfigureFinishedClassList(self):
+        finishedClassList = CourseListGroupWidget("finished classes")
+        self.centerMasterLayout.addWidget(finishedClassList)
 
     def ConfigureClassList(self):
         classList = CourseListGroupWidget("classes")
-        classList.SetCourses(CurriculumDesigner.GetTestCourses())
+        classList.SetCourses(CurriculumDesigner.GetAllCourses())
         self.centerMasterLayout.addWidget(classList)
 
     def ConfigureSemesterLayout(self):
@@ -51,17 +56,26 @@ class CurriculumnDesignerWindow(QMainWindow):
         freshSpring = CourseListGroupWidget("Freshman Spring")
         semesterLayout.addWidget(freshSpring, 0, 1)
 
+        freshSummer = CourseListGroupWidget("Freshman Summer")
+        semesterLayout.addWidget(freshSummer, 0, 2)
+
         SophmoreFall = CourseListGroupWidget("Sophmore Fall")
         semesterLayout.addWidget(SophmoreFall, 1, 0)
 
         SophmoreSpring = CourseListGroupWidget("Sophmore Spring")
         semesterLayout.addWidget(SophmoreSpring, 1, 1)
 
+        SophmoreSummer = CourseListGroupWidget("Sophmore Summer")
+        semesterLayout.addWidget(SophmoreSummer, 1, 2)
+
         JuniorFall = CourseListGroupWidget("Junior Fall")
         semesterLayout.addWidget(JuniorFall, 2, 0)
 
         JuniorSpring = CourseListGroupWidget("Junior Spring")
         semesterLayout.addWidget(JuniorSpring, 2, 1)
+
+        JuniorSummer = CourseListGroupWidget("Junior Summer")
+        semesterLayout.addWidget(JuniorSummer, 2, 2)
 
         SeniorFall = CourseListGroupWidget("Senior Fall")
         semesterLayout.addWidget(SeniorFall, 3, 0)

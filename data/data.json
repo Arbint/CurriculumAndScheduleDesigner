@@ -1,0 +1,43 @@
+[
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":1001,
+        "courseName":"Orientation to ANGD"
+    },
+    
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":1312,
+        "courseName":"Hard Surface Modeling"
+    },
+
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":1313,
+        "courseName":"Game Engines"
+    },
+
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":1314,
+        "courseName":"Organic Modeling"
+    },
+
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":1315,
+        "courseName":"Principles ofAnimation"
+    },
+
+    {
+        "departPrefix":"MATH",
+        "courseNumber":1304,
+        "courseName":"College Algebra"
+    },
+
+    {
+        "departPrefix":"ENGL",
+        "courseNumber":1311,
+        "courseName":"Composition I"
+    }
+]
