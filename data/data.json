@@ -39,5 +39,143 @@
         "departPrefix":"ENGL",
         "courseNumber":1311,
         "courseName":"Composition I"
+    },
+
+    {
+        "departPrefix":"FYES",
+        "courseNumber":1211,
+        "courseName":"First Year Experience Seminar"
+    },
+
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":1302,
+        "courseName":"Elements of Design Seminar"
+    },
+
+    {
+        "departPrefix":"ENGL",
+        "courseNumber":1312,
+        "courseName":"Composition II" 
+    },
+
+    {
+        "departPrefix":"COMM",
+        "courseNumber":1302,
+        "courseName":"Media Literacy" 
+    },
+
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":4100,
+        "courseName":"Animation Industry Seminar" 
+    },
+
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":4100,
+        "courseName":"Animation Industry Seminar" 
+    },
+
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":4100,
+        "courseName":"Animation Industry Seminar" 
+    },
+
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":4100,
+        "courseName":"Animation Industry Seminar" 
+    },
+
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":4100,
+        "courseName":"Animation Industry Seminar" 
+    },
+
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":4100,
+        "courseName":"Animation Industry Seminar" 
+    },
+
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":2371,
+        "courseName":"Game Programming I" 
+    },
+
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":2372,
+        "courseName":"Game Programming II" 
+    },
+
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":3371,
+        "courseName":"Game Programming III" 
+    },
+
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":3372,
+        "courseName":"Game Programming IV" 
+    },
+
+    {
+        "departPrefix":"MATH",
+        "courseNumber":1306,
+        "courseName":"College Geometry" 
+    },
+
+    {
+        "departPrefix":"PHYS",
+        "courseNumber":1301,
+        "courseName":"General Physics" 
+    },
+
+    {
+        "departPrefix":"PHYS",
+        "courseNumber":1101,
+        "courseName":"General Physics Laboratory I" 
+    },
+
+    {
+        "departPrefix":"CIS",
+        "courseNumber":2330,
+        "courseName":"Programming Languages I" 
+    },
+
+    {
+        "departPrefix":"ARTS",
+        "courseNumber":1301,
+        "courseName":"Drawing I"
+    },
+
+    {
+        "departPrefix":"MATH",
+        "courseNumber":1311,
+        "courseName":"Precalculus"
+    },
+
+    {
+        "departPrefix":"ANGD",
+        "courseNumber":2321,
+        "courseName":"Technical Direction"
+    },
+
+    {
+        "departPrefix":"CIS",
+        "courseNumber":3330,
+        "courseName":"Programming Languages II"
+    },
+
+    {
+        "departPrefix":"PHIL",
+        "courseNumber":1381,
+        "courseName":"Introduction to Philosophy"
     }
 ]
