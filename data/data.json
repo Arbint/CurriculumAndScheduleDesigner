@@ -1,180 +1,180 @@
 [
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":1001,
         "courseName":"Orientation to ANGD"
     },
     
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":1312,
         "courseName":"Hard Surface Modeling"
     },
 
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":1313,
         "courseName":"Game Engines"
     },
 
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":1314,
         "courseName":"Organic Modeling"
     },
 
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":1315,
         "courseName":"Principles ofAnimation"
     },
 
     {
-        "departPrefix":"MATH",
+        "departmentPrefix":"MATH",
         "courseNumber":1304,
         "courseName":"College Algebra"
     },
 
     {
-        "departPrefix":"ENGL",
+        "departmentPrefix":"ENGL",
         "courseNumber":1311,
         "courseName":"Composition I"
     },
 
     {
-        "departPrefix":"FYES",
+        "departmentPrefix":"FYES",
         "courseNumber":1211,
         "courseName":"First Year Experience Seminar"
     },
 
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":1302,
         "courseName":"Elements of Design Seminar"
     },
 
     {
-        "departPrefix":"ENGL",
+        "departmentPrefix":"ENGL",
         "courseNumber":1312,
         "courseName":"Composition II" 
     },
 
     {
-        "departPrefix":"COMM",
+        "departmentPrefix":"COMM",
         "courseNumber":1302,
         "courseName":"Media Literacy" 
     },
 
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":4100,
         "courseName":"Animation Industry Seminar" 
     },
 
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":4100,
         "courseName":"Animation Industry Seminar" 
     },
 
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":4100,
         "courseName":"Animation Industry Seminar" 
     },
 
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":4100,
         "courseName":"Animation Industry Seminar" 
     },
 
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":4100,
         "courseName":"Animation Industry Seminar" 
     },
 
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":4100,
         "courseName":"Animation Industry Seminar" 
     },
 
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":2371,
         "courseName":"Game Programming I" 
     },
 
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":2372,
         "courseName":"Game Programming II" 
     },
 
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":3371,
         "courseName":"Game Programming III" 
     },
 
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":3372,
         "courseName":"Game Programming IV" 
     },
 
     {
-        "departPrefix":"MATH",
+        "departmentPrefix":"MATH",
         "courseNumber":1306,
         "courseName":"College Geometry" 
     },
 
     {
-        "departPrefix":"PHYS",
+        "departmentPrefix":"PHYS",
         "courseNumber":1301,
         "courseName":"General Physics" 
     },
 
     {
-        "departPrefix":"PHYS",
+        "departmentPrefix":"PHYS",
         "courseNumber":1101,
         "courseName":"General Physics Laboratory I" 
     },
 
     {
-        "departPrefix":"CIS",
+        "departmentPrefix":"CIS",
         "courseNumber":2330,
         "courseName":"Programming Languages I" 
     },
 
     {
-        "departPrefix":"ARTS",
+        "departmentPrefix":"ARTS",
         "courseNumber":1301,
         "courseName":"Drawing I"
     },
 
     {
-        "departPrefix":"MATH",
+        "departmentPrefix":"MATH",
         "courseNumber":1311,
         "courseName":"Precalculus"
     },
 
     {
-        "departPrefix":"ANGD",
+        "departmentPrefix":"ANGD",
         "courseNumber":2321,
         "courseName":"Technical Direction"
     },
 
     {
-        "departPrefix":"CIS",
+        "departmentPrefix":"CIS",
         "courseNumber":3330,
         "courseName":"Programming Languages II"
     },
 
     {
-        "departPrefix":"PHIL",
+        "departmentPrefix":"PHIL",
         "courseNumber":1381,
         "courseName":"Introduction to Philosophy"
     }
