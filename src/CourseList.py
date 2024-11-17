@@ -9,6 +9,13 @@ class CourseListModel(QAbstractListModel):
         self.listName= initListName
         self.courses = initCourse if initCourse != None else []
 
+    def ClassesToJsonList(self):
+        outCourses = []
+        for course in self.courses:
+            outCourses.append[course.ToInfoDict()]
+
+        return outCourses
+
     def GetTotalCredits(self):
         credits = 0
         for course in self.courses:
