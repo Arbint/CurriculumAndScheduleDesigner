@@ -90,8 +90,9 @@ class CourseListModel(QAbstractListModel):
 
     def removeRow(self, row, parent):
         if 0 <= row and row < len(self.courses):
+            self.beginRemoveRows(parent, row, row)
             del self.courses[row]
-            self.layoutChanged.emit()
+            self.endRemoveRows()
             return True
 
         return False
