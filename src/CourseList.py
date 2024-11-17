@@ -1,5 +1,7 @@
 from Course import Course
 from PySide6.QtCore import QAbstractListModel, Qt, QModelIndex, QMimeData
+from PySide6.QtGui import QImage
+import AssetManager
 import pickle
 
 class CourseListModel(QAbstractListModel):
@@ -8,6 +10,7 @@ class CourseListModel(QAbstractListModel):
 
         self.listName= initListName
         self.courses = initCourse if initCourse != None else []
+        self.tick = QImage(AssetManager.GetFinishedIcon())
 
     def Clear(self):
         self.beginResetModel()
@@ -47,6 +50,10 @@ class CourseListModel(QAbstractListModel):
         
         if role == Qt.UserRole:
             return course
+
+        if role == Qt.DecorationRole:
+            if course.finished:
+                return self.tick
 
     def supportedDragActions(self):
         return Qt.MoveAction
@@ -92,7 +99,7 @@ class CourseListModel(QAbstractListModel):
         if 0 <= row and row < len(self.courses):
             self.beginRemoveRows(parent, row, row)
             del self.courses[row]
-            self.endInsertRows()
+            self.endRemoveRows()
             return True
 
         return False

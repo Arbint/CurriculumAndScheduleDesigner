@@ -42,8 +42,9 @@ class CourseListViewGroup(QWidget):
         self.UpdateCredits()
 
     def ItemClicked(self, index):
-        itemData = self.listView.model().data(index, Qt.DisplayRole)
-        print(f"item {itemData} clicked")
+        itemData : Course = self.listView.model().data(index, Qt.UserRole)
+        itemData.finished = not itemData.finished
+        self.courseListModel.dataChanged.emit(index, index)
 
     def ModelUpdated(self):
         self.UpdateCredits()

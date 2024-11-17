@@ -2,7 +2,6 @@ import json
 import os
 from CourseList import CourseListModel
 
-
 def ConvertModelsToJson(models: list[CourseListModel]):
     data = {}
     for model in models:
