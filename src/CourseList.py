@@ -9,6 +9,13 @@ class CourseListModel(QAbstractListModel):
         self.listName= initListName
         self.courses = initCourse if initCourse != None else []
 
+    def GetTotalCredits(self):
+        credits = 0
+        for course in self.courses:
+            credits += course.GetCredits()
+
+        return credits
+
     def rowCount(self, parent):
         return len(self.courses)
 
@@ -21,15 +28,19 @@ class CourseListModel(QAbstractListModel):
         if role == Qt.UserRole:
             return course
 
+    def supportedDragActions(self):
+        return Qt.MoveAction
+
+    def supportedDropActions(self):
+        return Qt.MoveAction 
+
+    # needed to support the mime types, other wise, the drag and drop will not work
+    def mimeTypes(self):
+        return [CourseListModel.GetMimeDataFormat()]
         
     def flags(self, index):
         defaultFlags = super().flags(index)
-
-        if(index.isValid()):
-            return defaultFlags | Qt.ItemIsDragEnabled | Qt.ItemIsDropEnabled
-        else:
-            return defaultFlags | Qt.ItemIsDropEnabled
-
+        return defaultFlags | Qt.ItemIsDragEnabled | Qt.ItemIsDropEnabled
 
     def mimeData(self, indexes):
         mimeData = QMimeData()
@@ -37,24 +48,26 @@ class CourseListModel(QAbstractListModel):
             course = self.data(indexes[0], Qt.UserRole)
             mimeData.setData(CourseListModel.GetMimeDataFormat(), pickle.dumps(course))
 
+            mimeData.sourceModel = self
+            mimeData.sourceIndex = indexes[0]
+
         return mimeData
-    
 
     def dropMimeData(self, data, action, row, column, parent):
         if not data.hasFormat(CourseListModel.GetMimeDataFormat()):
             return False
 
-        course = pickle.loads(data.data(CourseListModel.GetMimeDataFormat()))
-        if row >= 0 and row <= len(self.courses):
+        if action == Qt.MoveAction:
+            course = pickle.loads(data.data(CourseListModel.GetMimeDataFormat()))
             self.courses.insert(row, course)
             self.layoutChanged.emit()
+
+            srcModel: CourseListModel = data.sourceModel
+            srcIndex = data.sourceIndex
+            srcModel.removeRow(srcIndex.row(), QModelIndex())
+
             return True
 
-        return False
-       
-    def supportedDragActions(self):
-        return Qt.MoveAction
-    
     def removeRow(self, row, parent):
         if 0 <= row and row < len(self.courses):
             del self.courses[row]

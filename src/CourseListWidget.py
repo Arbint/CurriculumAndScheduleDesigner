@@ -12,65 +12,7 @@ class CouresListView(QListView):
         self.setDragEnabled(True)
         self.setAcceptDrops(True)
         self.setDropIndicatorShown(True)
-
-
-    def startDrag(self, supportedActions):
-        index = self.currentIndex()
-        if not index.isValid():
-            return
-
-        course = index.data(Qt.UserRole)
-        if not course:
-            return
-
-        mimeData = QMimeData() 
-        mimeData.setData(CourseListModel.GetMimeDataFormat(), pickle.dumps(course))
-        pixMap = self.generateDragPixMap(index, course)
-
-        drag = QDrag(self)
-        drag.setMimeData(mimeData)
-        drag.setPixmap(pixMap)
-        drag.setHotSpot(pixMap.rect().center())
-
-        if drag.exec(Qt.MoveAction) == Qt.MoveAction:
-            self.model().removeRow(index.row(), QModelIndex())
-
-
-    def dragEnterEvent(self, event: QDragEnterEvent):
-        if event.mimeData().hasFormat(CourseListModel.GetMimeDataFormat()):
-            event.acceptProposedAction()
-        else:
-            super().dragEnterEvent(event)
-
-
-    def dragMoveEvent(self, event: QDragMoveEvent):
-        if event.mimeData().hasFormat(CourseListModel.GetMimeDataFormat()):
-            event.acceptProposedAction()
-        else:
-            super().dragMoveEvent(event)
-
-        
-    def dropEvent(self, event: QDropEvent):
-        if event.mimeData().hasFormat(CourseListModel.GetMimeDataFormat()):
-            mimeData = event.mimeData()
-            self.model().dropMimeData(mimeData, event.dropAction(), self.model().rowCount(QModelIndex()), 0, QModelIndex())
-            event.acceptProposedAction()
-
-        else:
-            super().dropEvent(event)
-
-
-    def generateDragPixMap(self, index, courseItem: Course):
-        rect = self.visualRect(index)
-        pixMap = QPixmap(rect.size())
-        pixMap.fill(Qt.transparent)
-
-        painter = QPainter(pixMap)
-        painter.setPen(Qt.green)
-        painter.setFont(self.font())
-        painter.drawText(pixMap.rect(), Qt.AlignCenter, f"{courseItem}")
-        painter.end()
-        return pixMap
+        self.setDefaultDropAction(Qt.MoveAction)
 
 
 class CourseListViewGroup(QWidget):
@@ -80,17 +22,28 @@ class CourseListViewGroup(QWidget):
         self.masterLayout = QVBoxLayout()
         self.setLayout(self.masterLayout)
 
-        self.label = QLabel("")
+        self.nameLabel = QLabel("")
         self.listView = CouresListView() 
 
-        self.listView.setDragEnabled(True)
-        self.listView.setAcceptDrops(True)
-        self.listView.setDropIndicatorShown(True)
-        self.listView.setDefaultDropAction(Qt.MoveAction)
-
-        self.masterLayout.addWidget(self.label)
+        self.masterLayout.addWidget(self.nameLabel)
         self.masterLayout.addWidget(self.listView)
 
+        self.totalCreditsLabel = QLabel("")
+        self.masterLayout.addWidget(self.totalCreditsLabel)
+
+        self.courseListModel = None
+
     def BindModel(self, modelToBind: CourseListModel):
-        self.label.setText(modelToBind.listName)
+        self.nameLabel.setText(modelToBind.listName)
         self.listView.setModel(modelToBind)
+        self.courseListModel = modelToBind
+        self.courseListModel.layoutChanged.connect(self.ModelUpdated)
+        self.UpdateCredits()
+
+    def ModelUpdated(self):
+        self.UpdateCredits()
+
+    def UpdateCredits(self):
+        self.totalCreditsLabel.setText(f"Total Credits: {self.courseListModel.GetTotalCredits()}")
+
+
