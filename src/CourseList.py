@@ -100,6 +100,7 @@ class CourseListModel(QAbstractListModel):
             self.beginRemoveRows(parent, row, row)
             del self.courses[row]
             self.endRemoveRows()
+            self.layoutChanged.emit()
             return True
 
         return False

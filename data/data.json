@@ -1,7 +1,7 @@
 [
     {
         "departmentPrefix":"ANGD",
-        "courseNumber":1001,
+        "courseNumber":1101,
         "courseName":"Orientation to ANGD"
     },
     
@@ -177,5 +177,107 @@
         "departmentPrefix":"PHIL",
         "courseNumber":1381,
         "courseName":"Introduction to Philosophy"
+    },
+
+    {
+        "departmentPrefix":"ANGD",
+        "courseNumber":3315,
+        "courseName":"Visual Narrative Conventions"
+    },
+
+    {
+        "departmentPrefix":"ANGD",
+        "courseNumber":2330,
+        "courseName":"History of Animation"
+    },
+
+    {
+        "departmentPrefix":"MATH",
+        "courseNumber":2322,
+        "courseName":"Linear Algebra"
+    },
+
+    {
+        "departmentPrefix":"ENGL",
+        "courseNumber":2310,
+        "courseName":"World Literature Studies"
+    },
+
+    {
+        "departmentPrefix":"ANGD",
+        "courseNumber":3330,
+        "courseName":"History of Games"
+    },
+
+    {
+        "departmentPrefix":"ANGD",
+        "courseNumber":4140,
+        "courseName":"Senior Thesis Workshop"
+    },
+
+    {
+        "departmentPrefix":"CIS",
+        "courseNumber":1300,
+        "courseName":"Programming Elective"
+    },
+
+    {
+        "departmentPrefix":"RELS",
+        "courseNumber":1300,
+        "courseName":"Any 1000 level RELS course"
+    },
+
+    {
+        "departmentPrefix":"ANGD",
+        "courseNumber":4350,
+        "courseName":"Senior Thesis Production I"
+    },
+
+    {
+        "departmentPrefix":"ANGD",
+        "courseNumber":4305,
+        "courseName":"Senior Portfolio"
+    },
+
+    {
+        "departmentPrefix":"RELS 4399 or PHIL 3375 or PHIL 3370",
+        "courseNumber":4399,
+        "courseName":"Sared Spaces or Aesthetics or Phil of Science & Technology"
+    },
+
+    {
+        "departmentPrefix":"CHIN",
+        "courseNumber":1311,
+        "courseName":"Chinese or Other LANG I(3 hours)"
+    },
+
+    {
+        "departmentPrefix":"ANGD",
+        "courseNumber":4360,
+        "courseName":"Senior Thesis Production II"
+    },
+
+    {
+        "departmentPrefix":"ANGD",
+        "courseNumber":4340,
+        "courseName":"Business of Animation and Game Design"
+    },
+
+    {
+        "departmentPrefix":"HIST",
+        "courseNumber":1311,
+        "courseName":"World History I"
+    },
+
+    {
+        "departmentPrefix":"CHIN",
+        "courseNumber":1312,
+        "courseName":"Chinese II or Other LANG II"
+    },
+
+    {
+        "departmentPrefix":"PEHP",
+        "courseNumber":1111,
+        "courseName":"Physical Activity Course"
     }
 ]
