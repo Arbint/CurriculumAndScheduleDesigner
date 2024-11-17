@@ -28,8 +28,7 @@ class CurriculumnPlaner(QMainWindow):
         self.finishedClassListViewGrp.BindModel(self.finishedClassModel)
         self.centralMasterLayout.addWidget(self.finishedClassListViewGrp)
 
-    
-    def AddSemester(self, name: str, parentGrid: QGridLayout, x, y, semesterCourses : list[Course] = []):
+    def AddSemester(self, name: str, parentGrid: QGridLayout, x, y, semesterCourses : list[Course] = None):
         semesterView = CourseListViewGroup()
         semesterModel = CourseListModel(semesterCourses, name)
         semesterView.BindModel(semesterModel)

@@ -3,12 +3,11 @@ from PySide6.QtCore import QAbstractListModel, Qt, QModelIndex, QMimeData
 import pickle
 
 class CourseListModel(QAbstractListModel):
-    def __init__(self, initCourse: list[Course] = [], initListName: str = "", parent=None):
+    def __init__(self, initCourse: list[Course] = None, initListName: str = "", parent=None):
         super().__init__(parent)
 
         self.listName= initListName
-        self.courses = initCourse 
-
+        self.courses = initCourse if initCourse != None else []
 
     def rowCount(self, parent):
         return len(self.courses)
