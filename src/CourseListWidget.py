@@ -24,6 +24,7 @@ class CourseListViewGroup(QWidget):
 
         self.nameLabel = QLabel("")
         self.listView = CouresListView() 
+        self.listView.clicked.connect(self.ItemClicked)
 
         self.masterLayout.addWidget(self.nameLabel)
         self.masterLayout.addWidget(self.listView)
@@ -39,6 +40,10 @@ class CourseListViewGroup(QWidget):
         self.courseListModel = modelToBind
         self.courseListModel.layoutChanged.connect(self.ModelUpdated)
         self.UpdateCredits()
+
+    def ItemClicked(self, index):
+        itemData = self.listView.model().data(index, Qt.DisplayRole)
+        print(f"item {itemData} clicked")
 
     def ModelUpdated(self):
         self.UpdateCredits()

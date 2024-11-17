@@ -92,7 +92,7 @@ class CourseListModel(QAbstractListModel):
         if 0 <= row and row < len(self.courses):
             self.beginRemoveRows(parent, row, row)
             del self.courses[row]
-            self.endRemoveRows()
+            self.endInsertRows()
             return True
 
         return False
