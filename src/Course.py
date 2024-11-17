@@ -16,6 +16,7 @@ class Course:
         outDict[Course.GetDepartmentPrefixKeyStr()] = self.departmentPrefix
         outDict[Course.GetCourseNumberKeyStr()] = self.courseNumber
         outDict[Course.GetCourseNameKeyStr()] = self.courseName
+        return outDict
 
     @staticmethod
     def GetDepartmentPrefixKeyStr():

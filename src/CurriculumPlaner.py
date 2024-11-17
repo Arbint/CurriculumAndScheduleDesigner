@@ -4,6 +4,7 @@ from CourseListWidget import CourseListViewGroup
 from CourseList import CourseListModel
 from Course import Course
 import os
+import SaveUtilties
 
 class CurriculumnPlaner(QMainWindow):
     def __init__(self):
@@ -36,7 +37,7 @@ class CurriculumnPlaner(QMainWindow):
 
     def SaveFile(self):
         savePath, selectedFilter = QFileDialog().getSaveFileName(self, "Save File", self.GetDefaultSaveDir(), self.GetSaveFileFilters())
-
+        SaveUtilties.SaveModelsToJson(self.models.values(), savePath)
 
     def GetDefaultSaveDir(self):
         srcDir = os.path.dirname(__file__)
@@ -46,7 +47,12 @@ class CurriculumnPlaner(QMainWindow):
 
 
     def LoadFile(self):
-        print("load file")
+        loadPath, _ = QFileDialog().getOpenFileName(self, "Load File", self.GetDefaultSaveDir(), self.GetSaveFileFilters())
+        loadedModelDict = SaveUtilties.LoadJsonDictFromPath(loadPath)
+        for loadedModelName, courseList in loadedModelDict.items():
+            foundModel = self.models[loadedModelName]
+            foundModel.Clear()
+            foundModel.InitCoursesFromList(courseList)
 
     def GetSaveFileFilters(self):
         filters = ""

@@ -9,10 +9,23 @@ class CourseListModel(QAbstractListModel):
         self.listName= initListName
         self.courses = initCourse if initCourse != None else []
 
-    def ClassesToJsonList(self):
+    def Clear(self):
+        self.beginResetModel()
+        self.courses = []
+        self.endResetModel()
+
+    def InitCoursesFromList(self, courseList):
+        for courseDict in courseList:
+            newCourse = Course.CreateFromDict(courseDict)
+            self.courses.append(newCourse)
+        
+        self.layoutChanged.emit()
+
+        
+    def CoursesToJsonList(self):
         outCourses = []
         for course in self.courses:
-            outCourses.append[course.ToInfoDict()]
+            outCourses.append(course.ToInfoDict())
 
         return outCourses
 
