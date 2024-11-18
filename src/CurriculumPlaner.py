@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QVBoxLayout, QGridLayout, QFileDialog, QLabel, QLineEdit, QPushButton
+from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QVBoxLayout, QGridLayout, QFileDialog, QLabel, QLineEdit, QPushButton, QSplitter
 from PySide6.QtGui import QAction, QIntValidator
 from PySide6.QtCore import Qt, Signal
 from CourseListWidget import CourseListViewGroup
@@ -59,6 +59,9 @@ class CurriculumnPlaner(QMainWindow):
         self.centralMasterLayout = QHBoxLayout()
         self.centralWidget().setLayout(self.centralMasterLayout)
 
+        self.mainSpliter = QSplitter()
+        self.centralMasterLayout.addWidget(self.mainSpliter)
+
         self.setWindowTitle("Curriculum Planer")
         self.models = {}
         self.ConfigureAllClassList()
@@ -113,14 +116,14 @@ class CurriculumnPlaner(QMainWindow):
         self.allClassListViewGrp = CourseListViewGroup()
         self.allClassModel = CourseListModel(Course.GetAllCourses(), self.GetAllClassesNameStr())
         self.allClassListViewGrp.BindModel(self.allClassModel)
-        self.centralMasterLayout.addWidget(self.allClassListViewGrp, 0.5)
+        self.mainSpliter.addWidget(self.allClassListViewGrp)
         self.models[self.GetAllClassesNameStr()] = self.allClassModel
 
     def ConfigureFinishedClassList(self):
         self.finishedClassListGrp = CourseListViewGroup()
         self.finishedClassListModel = CourseListModel([], self.GetFinishedClassesNameStr())
         self.finishedClassListGrp.BindModel(self.finishedClassListModel)
-        self.centralMasterLayout.addWidget(self.finishedClassListGrp, 0.5)
+        self.mainSpliter.addWidget(self.finishedClassListGrp)
         self.models[self.GetFinishedClassesNameStr()] = self.finishedClassListModel       
         self.finishedClassListModel.layoutChanged.connect(self.UpdateTotoalCredits)
 
@@ -134,8 +137,9 @@ class CurriculumnPlaner(QMainWindow):
 
     def ConfigureSemesters(self):
         self.semestersModels = {}
-        semesterLayout = QGridLayout()
-        self.centralMasterLayout.addLayout(semesterLayout, 1)
+        semesterWidget = QWidget()
+        semesterLayout = QGridLayout(parent=semesterWidget)
+        self.mainSpliter.addWidget(semesterWidget)
 
         self.AddSemester("Freshman Fall", semesterLayout, 0, 0)
         self.AddSemester("Freshman Spring", semesterLayout, 0, 1)

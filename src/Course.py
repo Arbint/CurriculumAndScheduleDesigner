@@ -2,25 +2,58 @@ import os
 import json
 
 class Course:
-    def __init__(self, departPrefix = "ANGD", courseNumber = 4399, courseName="ST: Dummy", finished = False):
+    def __init__(self, departPrefix = "ANGD", courseNumber = 4399, courseName="ST: Dummy", finished = False, note = ""):
         self.departmentPrefix = departPrefix
         self.courseNumber = courseNumber
         self.courseName = courseName
         self.finished = finished
+        self.note = note 
+
+    def GetCredits(self):
+        return int(str(self.courseNumber)[1])
+
+    def GetDepartment(self):
+        return self.departmentPrefix
+
+    def GetLevel(self):
+        return int(str(self.courseNumber)[0])
+
+    def GetFinished(self):
+        return self.finished
+
+    def __str__(self):
+        baseInfo = f"{self.departmentPrefix} {self.courseNumber} {self.courseName}"
+        if self.note != "":
+            baseInfo += f"\n({self.note})"
+        
+        return baseInfo
 
     @staticmethod
     def CreateFromDict(infoDict):
             return Course(infoDict[Course.GetDepartmentPrefixKeyStr()],
                         infoDict[Course.GetCourseNumberKeyStr()],
                         infoDict[Course.GetCourseNameKeyStr()],
-                        infoDict[Course.GetCourseFinishedKeyStr()])
+                        Course.GetBool(infoDict, Course.GetCourseFinishedKeyStr()),
+                        Course.GetStr(infoDict, Course.GetCourseNoteKeyStr())
+                        )
+
 
     @staticmethod
-    def CreateFromDictAllNoFinished(infoDict):
-            return Course(infoDict[Course.GetDepartmentPrefixKeyStr()],
-                        infoDict[Course.GetCourseNumberKeyStr()],
-                        infoDict[Course.GetCourseNameKeyStr()],
-                        False)
+    def GetOrNone(infoDict, keyStr):
+        if keyStr in infoDict:
+            return infoDict[keyStr]
+
+        return None
+
+    @staticmethod
+    def GetStr(infoDict, keyStr)->str:
+        foundVal = Course.GetOrNone(infoDict, keyStr)
+        return foundVal if foundVal else ""
+
+    @staticmethod
+    def GetBool(infoDict, keyStr)->bool:
+        foundVal = Course.GetOrNone(infoDict, keyStr)
+        return foundVal if foundVal else False
 
     def ToInfoDict(self):
         outDict = {}
@@ -28,6 +61,7 @@ class Course:
         outDict[Course.GetCourseNumberKeyStr()] = self.courseNumber
         outDict[Course.GetCourseNameKeyStr()] = self.courseName
         outDict[Course.GetCourseFinishedKeyStr()] = self.finished
+        outDict[Course.GetCourseNoteKeyStr()] = self.note
         return outDict
 
     @staticmethod
@@ -47,6 +81,10 @@ class Course:
         return "finished"
 
     @staticmethod
+    def GetCourseNoteKeyStr():
+        return "note"
+
+    @staticmethod
     def GetAllCourses():
         courses = []
         srcPath = os.path.dirname(os.path.abspath(__file__))
@@ -56,22 +94,7 @@ class Course:
         with open (dataPath, 'r') as file:
             data = json.load(file)
             for couresInfo in data:
-                course = Course.CreateFromDictAllNoFinished(couresInfo)
+                course = Course.CreateFromDict(couresInfo)
                 courses.append(course)
 
         return courses
-
-    def GetCredits(self):
-        return int(str(self.courseNumber)[1])
-
-    def GetDepartment(self):
-        return self.departmentPrefix
-
-    def GetLevel(self):
-        return int(str(self.courseNumber)[0])
-
-    def GetFinished(self):
-        return self.finished
-
-    def __str__(self):
-        return f"{self.departmentPrefix} {self.courseNumber} {self.courseName}"

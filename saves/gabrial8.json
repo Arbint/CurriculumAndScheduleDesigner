@@ -252,7 +252,8 @@
             "departmentPrefix": "CIS",
             "courseNumber": 2330,
             "courseName": "Programming Languages I",
-            "finished": true
+            "finished": true,
+            "note": "substution: SU22 ITSE 1302 Computer Programming - C++"
         },
         {
             "departmentPrefix": "MATH",
