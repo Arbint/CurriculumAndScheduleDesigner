@@ -24,7 +24,7 @@ class Course:
     def __str__(self):
         baseInfo = f"{self.departmentPrefix} {self.courseNumber} {self.courseName}"
         if self.note != "":
-            baseInfo += f"\n({self.note})"
+            baseInfo += f"\n({self.note})\n"
         
         return baseInfo
 
