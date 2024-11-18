@@ -11,7 +11,7 @@
             "departmentPrefix": "ANGD",
             "courseNumber": 1314,
             "courseName": "Organic Modeling",
-            "finished": false
+            "finished": true
         },
         {
             "departmentPrefix": "MATH",

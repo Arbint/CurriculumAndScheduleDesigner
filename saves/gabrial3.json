@@ -1,30 +1,61 @@
 {
-    "All Classes": [],
-    "Freshman Fall": [
+    "All Classes": [
         {
             "departmentPrefix": "ANGD",
-            "courseNumber": 1312,
-            "courseName": "Hard Surface Modeling",
-            "finished": false
+            "courseNumber": 2371,
+            "courseName": "Game Programming I",
+            "finished": true
         },
         {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1314,
-            "courseName": "Organic Modeling",
-            "finished": false
+            "departmentPrefix": "CIS",
+            "courseNumber": 2330,
+            "courseName": "Programming Languages I",
+            "finished": true
         },
         {
             "departmentPrefix": "MATH",
             "courseNumber": 1304,
             "courseName": "College Algebra",
-            "finished": false
+            "finished": true
         },
         {
             "departmentPrefix": "ENGL",
             "courseNumber": 1311,
             "courseName": "Composition I",
-            "finished": false
+            "finished": true
         },
+        {
+            "departmentPrefix": "COMM",
+            "courseNumber": 1302,
+            "courseName": "Media Literacy",
+            "finished": true
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1313,
+            "courseName": "Game Engines",
+            "finished": true
+        },
+        {
+            "departmentPrefix": "CIS",
+            "courseNumber": 1300,
+            "courseName": "Programming Elective",
+            "finished": true
+        },
+        {
+            "departmentPrefix": "PHIL",
+            "courseNumber": 1381,
+            "courseName": "Introduction to Philosophy",
+            "finished": true
+        },
+        {
+            "departmentPrefix": "CIS",
+            "courseNumber": 3330,
+            "courseName": "Programming Languages II",
+            "finished": true
+        }
+    ],
+    "Freshman Fall": [
         {
             "departmentPrefix": "FYES",
             "courseNumber": 1211,
@@ -38,46 +69,16 @@
             "finished": false
         }
     ],
-    "Freshman Spring": [
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1315,
-            "courseName": "Principles of Animation",
-            "finished": false
-        },
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1302,
-            "courseName": "Elements of Design Seminar",
-            "finished": false
-        },
+    "Freshman Spring": [],
+    "Freshman Summer": [
         {
             "departmentPrefix": "ENGL",
             "courseNumber": 1312,
             "courseName": "Composition II",
             "finished": false
-        },
-        {
-            "departmentPrefix": "COMM",
-            "courseNumber": 1302,
-            "courseName": "Media Literacy",
-            "finished": false
-        },
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1313,
-            "courseName": "Game Engines",
-            "finished": false
         }
     ],
-    "Freshman Summer": [],
     "Sophmore Fall": [
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 2371,
-            "courseName": "Game Programming I",
-            "finished": false
-        },
         {
             "departmentPrefix": "MATH",
             "courseNumber": 1306,
@@ -97,18 +98,6 @@
             "finished": false
         },
         {
-            "departmentPrefix": "CIS",
-            "courseNumber": 2330,
-            "courseName": "Programming Languages I",
-            "finished": false
-        },
-        {
-            "departmentPrefix": "ENGL",
-            "courseNumber": 3375,
-            "courseName": "Creative Writing",
-            "finished": false
-        },
-        {
             "departmentPrefix": "ANGD",
             "courseNumber": 4100,
             "courseName": "Animation Industry Seminar",
@@ -123,27 +112,27 @@
             "finished": false
         },
         {
-            "departmentPrefix": "MATH",
-            "courseNumber": 1311,
-            "courseName": "Precalculus",
-            "finished": false
-        },
-        {
             "departmentPrefix": "ANGD",
             "courseNumber": 2321,
             "courseName": "Technical Direction",
             "finished": false
         },
         {
-            "departmentPrefix": "CIS",
-            "courseNumber": 3330,
-            "courseName": "Programming Languages II",
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1312,
+            "courseName": "Hard Surface Modeling",
             "finished": false
         },
         {
-            "departmentPrefix": "PHIL",
-            "courseNumber": 1381,
-            "courseName": "Introduction to Philosophy",
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1302,
+            "courseName": "Elements of Design Seminar",
+            "finished": false
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1314,
+            "courseName": "Organic Modeling",
             "finished": false
         },
         {
@@ -153,7 +142,14 @@
             "finished": false
         }
     ],
-    "Sophmore Summer": [],
+    "Sophmore Summer": [
+        {
+            "departmentPrefix": "MATH",
+            "courseNumber": 1311,
+            "courseName": "Precalculus",
+            "finished": false
+        }
+    ],
     "Junior Fall": [
         {
             "departmentPrefix": "ANGD",
@@ -181,8 +177,8 @@
         },
         {
             "departmentPrefix": "ENGL",
-            "courseNumber": 2310,
-            "courseName": "World Literature Studies",
+            "courseNumber": 3375,
+            "courseName": "Creative Writing",
             "finished": false
         },
         {
@@ -201,20 +197,8 @@
         },
         {
             "departmentPrefix": "ANGD",
-            "courseNumber": 3330,
-            "courseName": "History of Games",
-            "finished": false
-        },
-        {
-            "departmentPrefix": "ANGD",
             "courseNumber": 4140,
             "courseName": "Senior Thesis Workshop",
-            "finished": false
-        },
-        {
-            "departmentPrefix": "CIS",
-            "courseNumber": 1300,
-            "courseName": "Programming Elective",
             "finished": false
         },
         {
@@ -225,12 +209,31 @@
         },
         {
             "departmentPrefix": "ANGD",
+            "courseNumber": 1315,
+            "courseName": "Principles of Animation",
+            "finished": false
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 3330,
+            "courseName": "History of Games",
+            "finished": false
+        },
+        {
+            "departmentPrefix": "ANGD",
             "courseNumber": 4100,
             "courseName": "Animation Industry Seminar",
             "finished": false
         }
     ],
-    "Junior Summer": [],
+    "Junior Summer": [
+        {
+            "departmentPrefix": "ENGL",
+            "courseNumber": 2310,
+            "courseName": "World Literature Studies",
+            "finished": false
+        }
+    ],
     "Senior Fall": [
         {
             "departmentPrefix": "ANGD",

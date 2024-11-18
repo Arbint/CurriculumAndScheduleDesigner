@@ -1,10 +1,54 @@
-from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QVBoxLayout, QGridLayout, QFileDialog
-from PySide6.QtGui import QAction
+from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QVBoxLayout, QGridLayout, QFileDialog, QLabel, QLineEdit, QPushButton
+from PySide6.QtGui import QAction, QIntValidator
+from PySide6.QtCore import Qt, Signal
 from CourseListWidget import CourseListViewGroup
 from CourseList import CourseListModel
 from Course import Course
 import os
 import SaveUtilties
+
+class AddCourseWidget(QWidget):
+    onAddCourse = Signal(str, int, str) 
+    def __init__(self, parent = None):
+        super().__init__(parent)
+        self.setMinimumSize(400, 200)
+        self.setWindowFlags(Qt.WindowType.Window)
+        self.show()
+        addCourseLayout = QGridLayout()
+        self.setLayout(addCourseLayout)
+        courseDepartmentLabel = QLabel("Couse Department Label:") 
+        self.courseDepartmentLineEdit = QLineEdit("ANGD")
+        courseNumberLabel = QLabel("Couse Number")
+        self.courseNumberLineEdit = QLineEdit()
+        self.courseNumberLineEdit.setValidator(QIntValidator())
+        courseNameLabel=QLabel("CourseName")
+        self.courseNameLineEdit=QLineEdit()
+
+        addCourseBtn = QPushButton("Add Course")
+        cancelBtn = QPushButton("Cancel")
+
+        addCourseLayout.addWidget(courseDepartmentLabel, 0, 0)
+        addCourseLayout.addWidget(self.courseDepartmentLineEdit, 0, 1)
+
+        addCourseLayout.addWidget(courseNumberLabel, 1, 0)
+        addCourseLayout.addWidget(self.courseNumberLineEdit, 1, 1)
+
+        addCourseLayout.addWidget(courseNameLabel, 2, 0)
+        addCourseLayout.addWidget(self.courseNameLineEdit, 2, 1)
+
+        addCourseLayout.addWidget(addCourseBtn)
+        addCourseLayout.addWidget(cancelBtn)
+
+        addCourseBtn.clicked.connect(self.AddCourseBtnClicked)
+        cancelBtn.clicked.connect(lambda : self.close())
+
+    def AddCourseBtnClicked(self):
+        courseDepartmentPrefix = self.courseDepartmentLineEdit.text() 
+        courseNumber = int(self.courseNumberLineEdit.text())
+        courseName = self.courseNameLineEdit.text()
+
+        self.onAddCourse.emit(courseDepartmentPrefix, courseNumber, courseName)
+        self.close()
 
 class CurriculumnPlaner(QMainWindow):
     def __init__(self):
@@ -19,7 +63,7 @@ class CurriculumnPlaner(QMainWindow):
         self.models = {}
         self.ConfigureAllClassList()
         self.ConfigureSemesters()
-
+        
     def ConfigureMainMenu(self):
         menuBar = self.menuBar()
         fileMenu = menuBar.addMenu("File")
@@ -32,6 +76,13 @@ class CurriculumnPlaner(QMainWindow):
         loadAction.triggered.connect(self.LoadFile)
         fileMenu.addAction(loadAction)
 
+        addCourseAction = QAction("Add Course", self)
+        addCourseAction.triggered.connect(self.AddCourse)
+        fileMenu.addAction(addCourseAction)
+
+    def AddCourse(self):
+        addCourseWidget = AddCourseWidget(self)
+        addCourseWidget.onAddCourse.connect(self.allClassModel.AddNewCourse)
 
     def SaveFile(self):
         savePath, selectedFilter = QFileDialog().getSaveFileName(self, "Save File", self.GetDefaultSaveDir(), self.GetSaveFileFilters())

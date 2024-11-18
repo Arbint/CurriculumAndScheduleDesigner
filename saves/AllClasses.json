@@ -1,6 +1,11 @@
 {
-    "All Classes": [],
-    "Freshman Fall": [
+    "All Classes": [
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1101,
+            "courseName": "Orientation to ANGD",
+            "finished": false
+        },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 1312,
@@ -9,8 +14,20 @@
         },
         {
             "departmentPrefix": "ANGD",
+            "courseNumber": 1313,
+            "courseName": "Game Engines",
+            "finished": false
+        },
+        {
+            "departmentPrefix": "ANGD",
             "courseNumber": 1314,
             "courseName": "Organic Modeling",
+            "finished": false
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1315,
+            "courseName": "Principles of Animation",
             "finished": false
         },
         {
@@ -33,20 +50,6 @@
         },
         {
             "departmentPrefix": "ANGD",
-            "courseNumber": 1101,
-            "courseName": "Orientation to ANGD",
-            "finished": false
-        }
-    ],
-    "Freshman Spring": [
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1315,
-            "courseName": "Principles of Animation",
-            "finished": false
-        },
-        {
-            "departmentPrefix": "ANGD",
             "courseNumber": 1302,
             "courseName": "Elements of Design Seminar",
             "finished": false
@@ -65,17 +68,62 @@
         },
         {
             "departmentPrefix": "ANGD",
-            "courseNumber": 1313,
-            "courseName": "Game Engines",
+            "courseNumber": 4100,
+            "courseName": "Animation Industry Seminar",
             "finished": false
-        }
-    ],
-    "Freshman Summer": [],
-    "Sophmore Fall": [
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 4100,
+            "courseName": "Animation Industry Seminar",
+            "finished": false
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 4100,
+            "courseName": "Animation Industry Seminar",
+            "finished": false
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 4100,
+            "courseName": "Animation Industry Seminar",
+            "finished": false
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 4100,
+            "courseName": "Animation Industry Seminar",
+            "finished": false
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 4100,
+            "courseName": "Animation Industry Seminar",
+            "finished": false
+        },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 2371,
             "courseName": "Game Programming I",
+            "finished": false
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 2372,
+            "courseName": "Game Programming II",
+            "finished": false
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 3371,
+            "courseName": "Game Programming III",
+            "finished": false
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 3372,
+            "courseName": "Game Programming IV",
             "finished": false
         },
         {
@@ -109,20 +157,6 @@
             "finished": false
         },
         {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 4100,
-            "courseName": "Animation Industry Seminar",
-            "finished": false
-        }
-    ],
-    "Sophmore Spring": [
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 2372,
-            "courseName": "Game Programming II",
-            "finished": false
-        },
-        {
             "departmentPrefix": "MATH",
             "courseNumber": 1311,
             "courseName": "Precalculus",
@@ -144,21 +178,6 @@
             "departmentPrefix": "PHIL",
             "courseNumber": 1381,
             "courseName": "Introduction to Philosophy",
-            "finished": false
-        },
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 4100,
-            "courseName": "Animation Industry Seminar",
-            "finished": false
-        }
-    ],
-    "Sophmore Summer": [],
-    "Junior Fall": [
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 3371,
-            "courseName": "Game Programming III",
             "finished": false
         },
         {
@@ -187,20 +206,6 @@
         },
         {
             "departmentPrefix": "ANGD",
-            "courseNumber": 4100,
-            "courseName": "Animation Industry Seminar",
-            "finished": false
-        }
-    ],
-    "Junior Spring": [
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 3372,
-            "courseName": "Game Programming IV",
-            "finished": false
-        },
-        {
-            "departmentPrefix": "ANGD",
             "courseNumber": 3330,
             "courseName": "History of Games",
             "finished": false
@@ -225,15 +230,6 @@
         },
         {
             "departmentPrefix": "ANGD",
-            "courseNumber": 4100,
-            "courseName": "Animation Industry Seminar",
-            "finished": false
-        }
-    ],
-    "Junior Summer": [],
-    "Senior Fall": [
-        {
-            "departmentPrefix": "ANGD",
             "courseNumber": 4440,
             "courseName": "Senior Thesis Production I",
             "finished": false
@@ -256,14 +252,6 @@
             "courseName": "Chinese or Other LANG I(3 hours)",
             "finished": false
         },
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 4100,
-            "courseName": "Animation Industry Seminar",
-            "finished": false
-        }
-    ],
-    "Senior Spring": [
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 4450,
@@ -296,9 +284,20 @@
         },
         {
             "departmentPrefix": "ANGD",
-            "courseNumber": 4100,
-            "courseName": "Animation Industry Seminar",
+            "courseNumber": 4399,
+            "courseName": "ST: Realizing 3D",
             "finished": false
         }
-    ]
+    ],
+    "Freshman Fall": [],
+    "Freshman Spring": [],
+    "Freshman Summer": [],
+    "Sophmore Fall": [],
+    "Sophmore Spring": [],
+    "Sophmore Summer": [],
+    "Junior Fall": [],
+    "Junior Spring": [],
+    "Junior Summer": [],
+    "Senior Fall": [],
+    "Senior Spring": []
 }

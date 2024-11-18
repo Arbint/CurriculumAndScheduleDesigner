@@ -26,7 +26,7 @@
     {
         "departmentPrefix":"ANGD",
         "courseNumber":1315,
-        "courseName":"Principles ofAnimation"
+        "courseName":"Principles of Animation"
     },
 
     {
@@ -150,9 +150,9 @@
     },
 
     {
-        "departmentPrefix":"ARTS",
-        "courseNumber":1301,
-        "courseName":"Drawing I"
+        "departmentPrefix":"ENGL",
+        "courseNumber":3375,
+        "courseName":"Creative Writing"
     },
 
     {
@@ -229,7 +229,7 @@
 
     {
         "departmentPrefix":"ANGD",
-        "courseNumber":4350,
+        "courseNumber":4440,
         "courseName":"Senior Thesis Production I"
     },
 
@@ -253,7 +253,7 @@
 
     {
         "departmentPrefix":"ANGD",
-        "courseNumber":4360,
+        "courseNumber":4450,
         "courseName":"Senior Thesis Production II"
     },
 
