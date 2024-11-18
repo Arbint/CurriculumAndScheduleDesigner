@@ -14,6 +14,12 @@
         },
         {
             "departmentPrefix": "MATH",
+            "courseNumber": 2322,
+            "courseName": "Linear Algebra",
+            "finished": false
+        },
+        {
+            "departmentPrefix": "MATH",
             "courseNumber": 1306,
             "courseName": "College Geometry",
             "finished": false
@@ -34,12 +40,6 @@
             "departmentPrefix": "ANGD",
             "courseNumber": 2321,
             "courseName": "Technical Direction",
-            "finished": false
-        },
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1312,
-            "courseName": "Hard Surface Modeling",
             "finished": false
         },
         {
@@ -107,15 +107,15 @@
             "finished": false
         },
         {
-            "departmentPrefix": "MATH",
-            "courseNumber": 2322,
-            "courseName": "Linear Algebra",
-            "finished": false
-        },
-        {
             "departmentPrefix": "FYES",
             "courseNumber": 1211,
             "courseName": "First Year Experience Seminar",
+            "finished": false
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1312,
+            "courseName": "Hard Surface Modeling",
             "finished": false
         },
         {
@@ -300,6 +300,12 @@
             "departmentPrefix": "CIS",
             "courseNumber": 3330,
             "courseName": "Programming Languages II",
+            "finished": true
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 4384,
+            "courseName": "Elements of Gameplay",
             "finished": true
         },
         {
