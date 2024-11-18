@@ -112,7 +112,7 @@ class CurriculumnPlaner(QMainWindow):
         self.allClassListViewGrp = CourseListViewGroup()
         self.allClassModel = CourseListModel(Course.GetAllCourses(), self.GetAllClassesNameStr())
         self.allClassListViewGrp.BindModel(self.allClassModel)
-        self.centralMasterLayout.addWidget(self.allClassListViewGrp)
+        self.centralMasterLayout.addWidget(self.allClassListViewGrp, 0.5)
         self.models[self.GetAllClassesNameStr()] = self.allClassModel
 
     def AddSemester(self, name: str, parentGrid: QGridLayout, x, y, semesterCourses : list[Course] = None):
@@ -126,7 +126,7 @@ class CurriculumnPlaner(QMainWindow):
     def ConfigureSemesters(self):
         self.semestersModels = {}
         semesterLayout = QGridLayout()
-        self.centralMasterLayout.addLayout(semesterLayout)
+        self.centralMasterLayout.addLayout(semesterLayout, 1)
 
         self.AddSemester("Freshman Fall", semesterLayout, 0, 0)
         self.AddSemester("Freshman Spring", semesterLayout, 0, 1)
