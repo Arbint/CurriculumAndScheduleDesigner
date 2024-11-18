@@ -143,6 +143,21 @@ class CurriculumnPlaner(QMainWindow):
         self.AddSemester("Senior Fall", semesterLayout, 3, 0)
         self.AddSemester("Senior Spring", semesterLayout, 3, 1)
 
+        self.totalCreditLabel = QLabel("")
+        semesterLayout.addWidget(self.totalCreditLabel, 3, 2)
+
+        for semesterModel in self.semestersModels.values():
+            semesterModel: CourseListModel = semesterModel
+            semesterModel.layoutChanged.connect(self.UpdateTotoalCredits)
+        
+    def UpdateTotoalCredits(self):
+        credits = 0
+        for semesterModel in self.semestersModels.values():
+            semesterModel: CourseListModel = semesterModel
+            credits += semesterModel.GetTotalCredits()
+
+        self.totalCreditLabel.setText(f"total credits: {credits}")
+
 
     def GetAllClassesNameStr(self):
         return "All Classes"
