@@ -234,7 +234,7 @@
     "Senior Fall": [
         {
             "departmentPrefix": "ANGD",
-            "courseNumber": 4440,
+            "courseNumber": 4340,
             "courseName": "Senior Thesis Production I",
             "finished": false
         },
@@ -266,7 +266,7 @@
     "Senior Spring": [
         {
             "departmentPrefix": "ANGD",
-            "courseNumber": 4450,
+            "courseNumber": 4350,
             "courseName": "Senior Thesis Production II",
             "finished": false
         },
@@ -300,5 +300,6 @@
             "courseName": "Animation Industry Seminar",
             "finished": false
         }
-    ]
+    ],
+    "Finished Classes": []
 }
