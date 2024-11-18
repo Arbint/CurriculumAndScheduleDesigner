@@ -63,6 +63,7 @@ class CurriculumnPlaner(QMainWindow):
         self.models = {}
         self.ConfigureAllClassList()
         self.ConfigureSemesters()
+        self.ConfigureFinishedClassList()
         
     def ConfigureMainMenu(self):
         menuBar = self.menuBar()
@@ -115,6 +116,14 @@ class CurriculumnPlaner(QMainWindow):
         self.centralMasterLayout.addWidget(self.allClassListViewGrp, 0.5)
         self.models[self.GetAllClassesNameStr()] = self.allClassModel
 
+    def ConfigureFinishedClassList(self):
+        self.finishedClassListGrp = CourseListViewGroup()
+        self.finishedClassListModel = CourseListModel([], self.GetFinishedClassesNameStr())
+        self.finishedClassListGrp.BindModel(self.finishedClassListModel)
+        self.centralMasterLayout.addWidget(self.finishedClassListGrp, 0.5)
+        self.models[self.GetFinishedClassesNameStr()] = self.finishedClassListModel       
+        self.finishedClassListModel.layoutChanged.connect(self.UpdateTotoalCredits)
+
     def AddSemester(self, name: str, parentGrid: QGridLayout, x, y, semesterCourses : list[Course] = None):
         semesterView = CourseListViewGroup()
         semesterModel = CourseListModel(semesterCourses, name)
@@ -155,12 +164,14 @@ class CurriculumnPlaner(QMainWindow):
         for semesterModel in self.semestersModels.values():
             semesterModel: CourseListModel = semesterModel
             credits += semesterModel.GetTotalCredits()
-
+        credits += self.finishedClassListModel.GetTotalCredits()
         self.totalCreditLabel.setText(f"total credits: {credits}")
-
 
     def GetAllClassesNameStr(self):
         return "All Classes"
+
+    def GetFinishedClassesNameStr(self):
+        return "Finished Classes"
 
 if __name__ == "__main__":
     app = QApplication()
