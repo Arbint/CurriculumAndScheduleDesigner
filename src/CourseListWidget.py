@@ -1,6 +1,6 @@
-from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QVBoxLayout, QListView, QLabel, QListWidget
-from PySide6.QtCore import Qt, QMimeData, QModelIndex
-from PySide6.QtGui import QDrag, QPixmap, QPainter, QDragEnterEvent, QDragMoveEvent, QDropEvent
+from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QVBoxLayout, QListView, QLabel, QListWidget, QMenu
+from PySide6.QtCore import Qt, QMimeData, QModelIndex, QPoint 
+from PySide6.QtGui import QDrag, QPixmap, QPainter, QDragEnterEvent, QDragMoveEvent, QDropEvent, QAction
 from CourseList import CourseListModel
 from Course import Course
 import pickle
@@ -13,6 +13,24 @@ class CouresListView(QListView):
         self.setAcceptDrops(True)
         self.setDropIndicatorShown(True)
         self.setDefaultDropAction(Qt.MoveAction)
+
+        self.setContextMenuPolicy(Qt.CustomContextMenu)
+        self.customContextMenuRequested.connect(self.ShowContextMenu)
+
+    def ShowContextMenu(self, position: QPoint):
+        index = self.indexAt(position)
+        if index.isValid():
+            contextMenu = QMenu(self)
+            changeAction = QAction("Configure")
+            deleteAction = QAction("Delete")
+
+            contextMenu.addAction(changeAction)
+            contextMenu.addAction(deleteAction)
+            changeAction.triggered.connect(lambda : self.ChangeCourse(index))
+            contextMenu.exec(self.viewport().mapToGlobal(position))
+
+    def ChangeCourse(self, courseIndex):
+        print(f"changing course: {courseIndex}")
 
 
 class CourseListViewGroup(QWidget):
