@@ -12,8 +12,8 @@ class CourseListModel(QAbstractListModel):
         self.courses = initCourse if initCourse != None else []
         self.tick = QImage(AssetManager.GetFinishedIcon())
 
-    def AddNewCourse(self, courseDepartmentPrefix, courseNumber, courseName):
-            self.courses.append(Course(courseDepartmentPrefix, courseNumber, courseName))
+    def AddNewCourse(self, courseDepartmentPrefix, courseNumber, courseName, courseFinished, courseNote):
+            self.courses.append(Course(courseDepartmentPrefix, courseNumber, courseName, courseFinished, courseNote))
             self.layoutChanged.emit()
 
     def Clear(self):

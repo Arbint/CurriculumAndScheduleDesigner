@@ -1,6 +1,7 @@
 from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QVBoxLayout, QListView, QLabel, QListWidget, QMenu
 from PySide6.QtCore import Qt, QMimeData, QModelIndex, QPoint 
 from PySide6.QtGui import QDrag, QPixmap, QPainter, QDragEnterEvent, QDragMoveEvent, QDropEvent, QAction
+from CourseConfigureWidget import CourseConfigureWidget
 from CourseList import CourseListModel
 from Course import Course
 import pickle
@@ -27,10 +28,19 @@ class CouresListView(QListView):
             contextMenu.addAction(changeAction)
             contextMenu.addAction(deleteAction)
             changeAction.triggered.connect(lambda : self.ChangeCourse(index))
+            deleteAction.triggered.connect(lambda : self.DeleteCourse(index))
             contextMenu.exec(self.viewport().mapToGlobal(position))
 
     def ChangeCourse(self, courseIndex):
-        print(f"changing course: {courseIndex}")
+        courseToConfigure : Course = self.model().data(courseIndex, Qt.UserRole)
+        configureWidget = CourseConfigureWidget(self, CourseConfigureWidget.ConfigureMode(), courseToConfigure)
+        configureWidget.onConfigureCourse.connect(self.CourseConfigured)
+
+    def CourseConfigured(self):
+        self.model().layoutChanged()
+
+    def DeleteCourse(self, courseIndex):
+        self.model().removeRow(courseIndex.row(), QModelIndex())
 
 
 class CourseListViewGroup(QWidget):

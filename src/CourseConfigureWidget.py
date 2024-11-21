@@ -1,16 +1,17 @@
-from PySide6.QtWidgets import QWidget, QGridLayout, QLineEdit, QLabel, QPushButton
+from PySide6.QtWidgets import QWidget, QGridLayout, QLineEdit, QLabel, QPushButton, QCheckBox, QTextEdit
 from PySide6.QtCore import Signal, Qt
 from PySide6.QtGui import QIntValidator
 from Course import Course
 
-class ConfigureCourseWidget(QWidget):
-    onAddCourse = Signal(str, int, str) 
+class CourseConfigureWidget(QWidget):
+    onAddCourse = Signal(str, int, str, bool, str) 
+    onConfigureCourse = Signal()
 
-    @classmethod
+    @staticmethod
     def ConfigureMode():
         return 0
 
-    @classmethod
+    @staticmethod
     def AddMode():
         return 1
 
@@ -19,47 +20,76 @@ class ConfigureCourseWidget(QWidget):
         self.setMinimumSize(400, 200)
         self.setWindowFlags(Qt.WindowType.Window)
         self.show()
-        addCourseLayout = QGridLayout()
-        self.setLayout(addCourseLayout)
+        configureCourseLayout = QGridLayout()
+        self.setLayout(configureCourseLayout)
+
         courseDepartmentLabel = QLabel("Couse Department Label:") 
         self.courseDepartmentLineEdit = QLineEdit("ANGD")
-        courseNumberLabel = QLabel("Couse Number")
+        
+        courseNumberLabel = QLabel("Couse Number:")
         self.courseNumberLineEdit = QLineEdit()
         self.courseNumberLineEdit.setValidator(QIntValidator())
-        courseNameLabel=QLabel("CourseName")
+
+        courseNameLabel=QLabel("Course Name:")
         self.courseNameLineEdit=QLineEdit()
 
+        courseFinishedLabel=QLabel("Finished:")
+        self.courseFinishedCheckbox=QCheckBox()
 
-        addCourseLayout.addWidget(courseDepartmentLabel, 0, 0)
-        addCourseLayout.addWidget(self.courseDepartmentLineEdit, 0, 1)
+        courseNoteLabel=QLabel("Note:")
+        self.couresNoteTextEdit= QTextEdit()
 
-        addCourseLayout.addWidget(courseNumberLabel, 1, 0)
-        addCourseLayout.addWidget(self.courseNumberLineEdit, 1, 1)
+        configureCourseLayout.addWidget(courseDepartmentLabel, 0, 0)
+        configureCourseLayout.addWidget(self.courseDepartmentLineEdit, 0, 1)
 
-        addCourseLayout.addWidget(courseNameLabel, 2, 0)
-        addCourseLayout.addWidget(self.courseNameLineEdit, 2, 1)
+        configureCourseLayout.addWidget(courseNumberLabel, 1, 0)
+        configureCourseLayout.addWidget(self.courseNumberLineEdit, 1, 1)
 
-        if mode == ConfigureCourseWidget.AddMode(): 
+        configureCourseLayout.addWidget(courseNameLabel, 2, 0)
+        configureCourseLayout.addWidget(self.courseNameLineEdit, 2, 1)
+
+        configureCourseLayout.addWidget(courseFinishedLabel, 3, 0)
+        configureCourseLayout.addWidget(self.courseFinishedCheckbox, 3, 1)
+
+        configureCourseLayout.addWidget(courseNoteLabel, 4, 0)
+        configureCourseLayout.addWidget(self.couresNoteTextEdit, 4, 1)
+
+        if mode == CourseConfigureWidget.AddMode(): 
             addCourseBtn = QPushButton("Add Course")
-            addCourseLayout.addWidget(addCourseBtn)
+            configureCourseLayout.addWidget(addCourseBtn)
             addCourseBtn.clicked.connect(self.AddCourseBtnClicked)
 
-        elif mode == ConfigureCourseWidget.ConfigureMode():
-            configureBtn = QPushButton("Confirm Course")
-            addCourseLayout.addWidget(configureBtn)
-            configureBtn.clicked.connect(self.ConfigureCourseBtnClicked)
+        elif mode == CourseConfigureWidget.ConfigureMode():
+            self.LoadCourseInfo(course)
+            configureBtn = QPushButton("Confirm Change")
+            configureCourseLayout.addWidget(configureBtn)
+            configureBtn.clicked.connect(lambda : self.ConfigureCourseBtnClicked(course))
 
         cancelBtn = QPushButton("Cancel")
-        addCourseLayout.addWidget(cancelBtn)
+        configureCourseLayout.addWidget(cancelBtn)
         cancelBtn.clicked.connect(lambda : self.close())
 
-    def ConfigureCourseBtnClicked(self):
-        print(f"configuring")
+    def LoadCourseInfo(self, courseInfoSrc : Course):
+        self.courseDepartmentLineEdit.setText(courseInfoSrc.departmentPrefix) 
+        self.courseNumberLineEdit.setText(str(courseInfoSrc.courseNumber))
+        self.courseNameLineEdit.setText(courseInfoSrc.courseName)
+        self.courseFinishedCheckbox.setChecked(courseInfoSrc.finished)
+        self.couresNoteTextEdit.setText(courseInfoSrc.note)
 
-    def AddCourseBtnClicked(self):
+    def ConfigureCourseBtnClicked(self, courseToConfiture: Course):
+        courseToConfiture.UpdateData(*self.GetCourseConfigFromWidgets())
+        self.onConfigureCourse.emit()
+        self.close()
+
+    def GetCourseConfigFromWidgets(self):
         courseDepartmentPrefix = self.courseDepartmentLineEdit.text() 
         courseNumber = int(self.courseNumberLineEdit.text())
         courseName = self.courseNameLineEdit.text()
+        courseFinished = self.courseFinishedCheckbox.isChecked()
+        courseNote = self.couresNoteTextEdit.toPlainText()
+        return courseDepartmentPrefix, courseNumber, courseName, courseFinished, courseNote
 
-        self.onAddCourse.emit(courseDepartmentPrefix, courseNumber, courseName)
+
+    def AddCourseBtnClicked(self):
+        self.onAddCourse.emit(*self.GetCourseConfigFromWidgets())
         self.close()

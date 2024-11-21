@@ -8,6 +8,13 @@ class Course:
         self.courseName = courseName
         self.finished = finished
         self.note = note 
+    
+    def UpdateData(self, departPrefix: str, courseNumber: int, courseName: str, finished: str, note: str):
+        self.departmentPrefix = departPrefix
+        self.courseNumber = courseNumber
+        self.courseName = courseName
+        self.finished = finished
+        self.note = note 
 
     def GetCredits(self):
         return int(str(self.courseNumber)[1])
@@ -25,7 +32,7 @@ class Course:
         baseInfo = f"{self.departmentPrefix} {self.courseNumber} {self.courseName}"
         if self.note != "":
             baseInfo += f"\n({self.note})\n"
-        
+
         return baseInfo
 
     @staticmethod
