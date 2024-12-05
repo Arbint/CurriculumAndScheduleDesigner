@@ -5,6 +5,7 @@ from CourseListWidget import CourseListViewGroup
 from CourseConfigureWidget import CourseConfigureWidget
 from CourseList import CourseListModel
 from Course import Course
+from SearchCourseWidget import SearchCourseWidget
 import os
 import SaveUtilties
 
@@ -41,6 +42,18 @@ class CurriculumnPlaner(QMainWindow):
         addCourseAction = QAction("Add Course", self)
         addCourseAction.triggered.connect(self.AddCourse)
         fileMenu.addAction(addCourseAction)
+
+        searchCourseAction = QAction("Serach Course", self)
+        searchCourseAction.triggered.connect(self.SearchCoure)
+        fileMenu.addAction(searchCourseAction)
+
+    def SearchCoure(self):
+        searchWidget = SearchCourseWidget(self)
+        searchWidget.startSearch.connect(self.FindAndSelectionCourseWithKeyword)
+
+    def FindAndSelectionCourseWithKeyword(self, keyword):
+        for model in self.models.values():
+            model.SelectWithKeyword(keyword)
 
     def AddCourse(self):
         addCourseWidget = CourseConfigureWidget(self, CourseConfigureWidget.AddMode())

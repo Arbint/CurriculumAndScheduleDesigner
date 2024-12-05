@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QVBoxLayout, QListView, QLabel, QListWidget, QMenu
+from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QVBoxLayout, QListView, QLabel, QListWidget, QMenu, QAbstractItemView
 from PySide6.QtCore import Qt, QMimeData, QModelIndex, QPoint 
 from PySide6.QtGui import QDrag, QPixmap, QPainter, QDragEnterEvent, QDragMoveEvent, QDropEvent, QAction
 from CourseConfigureWidget import CourseConfigureWidget
@@ -66,8 +66,13 @@ class CourseListViewGroup(QWidget):
         self.nameLabel.setText(modelToBind.listName)
         self.listView.setModel(modelToBind)
         self.courseListModel = modelToBind
+        self.courseListModel.selectionChanged.connect(self.UpdateSelectionToIndex)
         self.courseListModel.layoutChanged.connect(self.ModelUpdated)
         self.UpdateCredits()
+
+    def UpdateSelectionToIndex(self, index: QModelIndex):
+        self.listView.setCurrentIndex(index)
+
 
     def ItemClicked(self, index):
         itemData : Course = self.listView.model().data(index, Qt.UserRole)

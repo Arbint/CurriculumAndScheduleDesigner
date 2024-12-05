@@ -1,10 +1,11 @@
 from Course import Course
-from PySide6.QtCore import QAbstractListModel, Qt, QModelIndex, QMimeData
+from PySide6.QtCore import QAbstractListModel, Qt, QModelIndex, QMimeData, Signal 
 from PySide6.QtGui import QImage
 import AssetManager
 import pickle
 
 class CourseListModel(QAbstractListModel):
+    selectionChanged = Signal(QModelIndex)
     def __init__(self, initCourse: list[Course] = None, initListName: str = "", parent=None):
         super().__init__(parent)
 
@@ -15,6 +16,13 @@ class CourseListModel(QAbstractListModel):
     def AddNewCourse(self, courseDepartmentPrefix, courseNumber, courseName, courseFinished, courseNote):
             self.courses.append(Course(courseDepartmentPrefix, courseNumber, courseName, courseFinished, courseNote))
             self.layoutChanged.emit()
+
+    def SelectWithKeyword(self, keyword: str):
+        for row in range(self.rowCount()):
+            index = self.index(row, 0)
+            itemText = self.data(index, Qt.DisplayRole)
+            if keyword.lower() in itemText.lower():
+                self.selectionChanged.emit(index)
 
     def Clear(self):
         self.beginResetModel()
@@ -43,7 +51,7 @@ class CourseListModel(QAbstractListModel):
 
         return credits
 
-    def rowCount(self, parent):
+    def rowCount(self, parent = None):
         return len(self.courses)
 
 
