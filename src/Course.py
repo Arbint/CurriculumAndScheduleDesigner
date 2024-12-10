@@ -34,6 +34,24 @@ class Course:
             baseInfo += f"\n({self.note})\n"
 
         return baseInfo
+    @staticmethod
+    def MakeDuplicate(otherCourse):
+        return Course(
+            departPrefix=otherCourse.departmentPrefix,
+            courseNumber = otherCourse.courseNumber,
+            courseName = otherCourse.courseName,
+            finished=otherCourse.finished,
+            note=otherCourse.note
+        )
+        
+    def MakeDuplicate(self):
+        return Course(
+                        departPrefix=self.departmentPrefix,
+                        courseNumber=self.courseNumber,
+                        courseName=self.courseName,
+                        finished=self.finished,
+                        note=self.note
+        )
 
     @staticmethod
     def CreateFromDict(infoDict):

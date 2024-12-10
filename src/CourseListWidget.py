@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QVBoxLayout, QListView, QLabel, QListWidget, QMenu, QAbstractItemView
-from PySide6.QtCore import Qt, QMimeData, QModelIndex, QPoint 
+from PySide6.QtCore import Qt, QMimeData, QModelIndex, QPoint, Signal
 from PySide6.QtGui import QDrag, QPixmap, QPainter, QDragEnterEvent, QDragMoveEvent, QDropEvent, QAction
 from CourseConfigureWidget import CourseConfigureWidget
 from CourseList import CourseListModel
@@ -7,6 +7,8 @@ from Course import Course
 import pickle
 
 class CouresListView(QListView):
+    courseDuplicated = Signal(Course)
+
     def __init__(self, parent=None):
         super().__init__(parent)
 
@@ -24,12 +26,20 @@ class CouresListView(QListView):
             contextMenu = QMenu(self)
             changeAction = QAction("Configure")
             deleteAction = QAction("Delete")
+            duplicateAction = QAction("Duplicate")
 
             contextMenu.addAction(changeAction)
             contextMenu.addAction(deleteAction)
+            contextMenu.addAction(duplicateAction)
+            
             changeAction.triggered.connect(lambda : self.ChangeCourse(index))
             deleteAction.triggered.connect(lambda : self.DeleteCourse(index))
+            duplicateAction.triggered.connect(lambda : self.DuplicateCourse(index))
             contextMenu.exec(self.viewport().mapToGlobal(position))
+
+    def DuplicateCourse(self, courseIndex):
+        courseToDuplicate : Course = self.model().data(courseIndex, Qt.UserRole)
+        self.courseDuplicated.emit(courseToDuplicate)
 
     def ChangeCourse(self, courseIndex):
         courseToConfigure : Course = self.model().data(courseIndex, Qt.UserRole)
