@@ -80,14 +80,18 @@ class CourseListViewGroup(QWidget):
         self.courseListModel.layoutChanged.connect(self.ModelUpdated)
         self.UpdateCredits()
 
+
     def UpdateSelectionToIndex(self, index: QModelIndex):
-        self.listView.setCurrentIndex(index)
+        selectionMode = self.listView.selectionMode()
+        if selectionMode:
+            self.listView.setCurrentIndex(index)
 
 
     def ItemClicked(self, index):
         itemData : Course = self.listView.model().data(index, Qt.UserRole)
         itemData.finished = not itemData.finished
         self.courseListModel.dataChanged.emit(index, index)
+
 
     def ModelUpdated(self):
         self.UpdateCredits()
