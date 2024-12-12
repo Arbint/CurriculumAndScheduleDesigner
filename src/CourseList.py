@@ -14,8 +14,12 @@ class CourseListModel(QAbstractListModel):
         self.tick = QImage(AssetManager.GetFinishedIcon())
 
     def AddNewCourse(self, courseDepartmentPrefix, courseNumber, courseName, courseFinished, courseNote):
-            self.courses.append(Course(courseDepartmentPrefix, courseNumber, courseName, courseFinished, courseNote))
-            self.layoutChanged.emit()
+        self.courses.append(Course(courseDepartmentPrefix, courseNumber, courseName, courseFinished, courseNote))
+        self.layoutChanged.emit()
+
+    def DuplicateCourse(self, courseToDuplicate: Course):
+        self.courses.append(courseToDuplicate.MakeDuplicate())
+        self.layoutChanged.emit()
 
     def SelectWithKeyword(self, keyword: str):
         for row in range(self.rowCount()):

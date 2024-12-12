@@ -1,10 +1,9 @@
-from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QVBoxLayout, QListView, QLabel, QListWidget, QMenu, QAbstractItemView
-from PySide6.QtCore import Qt, QMimeData, QModelIndex, QPoint, Signal
-from PySide6.QtGui import QDrag, QPixmap, QPainter, QDragEnterEvent, QDragMoveEvent, QDropEvent, QAction
+from PySide6.QtWidgets import QWidget, QVBoxLayout, QListView, QLabel, QMenu
+from PySide6.QtCore import Qt, QModelIndex, QPoint, Signal
+from PySide6.QtGui import QAction
 from CourseConfigureWidget import CourseConfigureWidget
 from CourseList import CourseListModel
 from Course import Course
-import pickle
 
 class CouresListView(QListView):
     courseDuplicated = Signal(Course)
@@ -63,6 +62,7 @@ class CourseListViewGroup(QWidget):
         self.nameLabel = QLabel("")
         self.listView = CouresListView() 
         self.listView.clicked.connect(self.ItemClicked)
+        self.listView.courseDuplicated.connect(self.DuplicateCourse)
 
         self.masterLayout.addWidget(self.nameLabel)
         self.masterLayout.addWidget(self.listView)
@@ -72,6 +72,10 @@ class CourseListViewGroup(QWidget):
 
         self.courseListModel = None
 
+    def DuplicateCourse(self, courseToDuplicate):
+        if self.courseListModel:
+            self.courseListModel.DuplicateCourse(courseToDuplicate)
+
     def BindModel(self, modelToBind: CourseListModel):
         self.nameLabel.setText(modelToBind.listName)
         self.listView.setModel(modelToBind)
@@ -80,23 +84,18 @@ class CourseListViewGroup(QWidget):
         self.courseListModel.layoutChanged.connect(self.ModelUpdated)
         self.UpdateCredits()
 
-
     def UpdateSelectionToIndex(self, index: QModelIndex):
         selectionMode = self.listView.selectionMode()
         if selectionMode:
             self.listView.setCurrentIndex(index)
-
 
     def ItemClicked(self, index):
         itemData : Course = self.listView.model().data(index, Qt.UserRole)
         itemData.finished = not itemData.finished
         self.courseListModel.dataChanged.emit(index, index)
 
-
     def ModelUpdated(self):
         self.UpdateCredits()
 
     def UpdateCredits(self):
         self.totalCreditsLabel.setText(f"Total Credits: {self.courseListModel.GetTotalCredits()}")
-
-

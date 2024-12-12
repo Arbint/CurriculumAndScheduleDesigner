@@ -59,10 +59,6 @@ class CurriculumnPlaner(QMainWindow):
         addCourseWidget = CourseConfigureWidget(self, CourseConfigureWidget.AddMode())
         addCourseWidget.onAddCourse.connect(self.allClassModel.AddNewCourse)
 
-    def DuplicateCourse(self, courseToDuplicate: Course):
-        self.courses.append(courseToDuplicate.MakeDuplicate())
-        self.layoutChanged.emit()
-
     def SaveFile(self):
         savePath, selectedFilter = QFileDialog().getSaveFileName(self, "Save File", self.GetDefaultSaveDir(), self.GetSaveFileFilters())
         SaveUtilties.SaveModelsToJson(self.models.values(), savePath)
