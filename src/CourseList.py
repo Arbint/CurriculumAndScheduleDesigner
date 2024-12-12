@@ -6,11 +6,11 @@ import pickle
 
 class CourseListModel(QAbstractListModel):
     selectionChanged = Signal(QModelIndex)
-    def __init__(self, initCourse: list[Course] = None, initListName: str = "", parent=None):
+    def __init__(self, initCourses: list[Course] = None, initListName: str = "", parent=None):
         super().__init__(parent)
 
         self.listName= initListName
-        self.courses = initCourse if initCourse != None else []
+        self.courses = initCourses if initCourses != None else []
         self.tick = QImage(AssetManager.GetFinishedIcon())
 
     def AddNewCourse(self, courseDepartmentPrefix, courseNumber, courseName, courseFinished, courseNote):
@@ -39,7 +39,6 @@ class CourseListModel(QAbstractListModel):
             self.courses.append(newCourse)
         
         self.layoutChanged.emit()
-
         
     def CoursesToJsonList(self):
         outCourses = []
@@ -124,4 +123,3 @@ class CourseListModel(QAbstractListModel):
     @staticmethod
     def GetMimeDataFormat():
         return "application/x-course"
-
