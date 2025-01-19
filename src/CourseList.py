@@ -100,13 +100,13 @@ class CourseListModel(QAbstractListModel):
             return False
 
         if action == Qt.MoveAction:
-            course = pickle.loads(data.data(CourseListModel.GetMimeDataFormat()))
-            self.courses.insert(row, course)
-            self.layoutChanged.emit()
-
             srcModel: CourseListModel = data.sourceModel
             srcIndex = data.sourceIndex
             srcModel.removeRow(srcIndex.row(), QModelIndex())
+
+            course = pickle.loads(data.data(CourseListModel.GetMimeDataFormat()))
+            self.courses.insert(row, course)
+            self.layoutChanged.emit()
 
             return True
 
