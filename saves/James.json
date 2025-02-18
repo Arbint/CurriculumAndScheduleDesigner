@@ -1,0 +1,176 @@
+{
+    "All Classes": [],
+    "Freshman Fall": [
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 5341,
+            "courseName": "Gradute Animation I",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 5100,
+            "courseName": "Industry Seminar",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 5314,
+            "courseName": "Element of Gameplay",
+            "finished": true,
+            "note": ""
+        }
+    ],
+    "Freshman Spring": [
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 5342,
+            "courseName": "Graduate Animation II",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 5100,
+            "courseName": "Industry Seminar",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 5311,
+            "courseName": "Prototyping and Game Design",
+            "finished": true,
+            "note": ""
+        }
+    ],
+    "Freshman Summer": [
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 5317,
+            "courseName": "3D Education",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 5343,
+            "courseName": "Motion Capture Animation",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 5305,
+            "courseName": "History of Games",
+            "finished": true,
+            "note": ""
+        }
+    ],
+    "Sophmore Fall": [
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 6311,
+            "courseName": "3D Education Practicum",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 6341,
+            "courseName": "Graduate Animation III",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 5216,
+            "courseName": "Thesis Design Workshop",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 5100,
+            "courseName": "Industry Seminar",
+            "finished": true,
+            "note": ""
+        }
+    ],
+    "Sophmore Spring": [
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 5312,
+            "courseName": "Story: Element and Structure",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 6211,
+            "courseName": "Business of Games",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 6312,
+            "courseName": "3D Education Practicum",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 6342,
+            "courseName": "Graduate Animation IV",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 6681,
+            "courseName": "Thesis Production I",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 5100,
+            "courseName": "Industry Seminar",
+            "finished": false,
+            "note": ""
+        }
+    ],
+    "Sophmore Summer": [
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 6682,
+            "courseName": "Thesis Production II",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 6213,
+            "courseName": "Graduate Portfolio",
+            "finished": false,
+            "note": ""
+        }
+    ],
+    "Junior Fall": [],
+    "Junior Spring": [],
+    "Junior Summer": [],
+    "Senior Fall": [],
+    "Senior Spring": [],
+    "Finished Classes": [
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 5218,
+            "courseName": "Visual Narritive Comventions",
+            "finished": false,
+            "note": ""
+        }
+    ]
+}
