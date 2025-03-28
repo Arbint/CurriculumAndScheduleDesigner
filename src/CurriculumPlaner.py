@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QVBoxLayout, QGridLayout, QFileDialog, QLabel, QLineEdit, QPushButton, QSplitter
+from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QVBoxLayout, QGridLayout, QFileDialog, QLabel, QLineEdit, QPushButton, QSplitter, QScrollArea
 from PySide6.QtGui import QAction, QIntValidator
 from PySide6.QtCore import Qt, Signal
 from CourseListWidget import CourseListViewGroup
@@ -108,6 +108,9 @@ class CurriculumnPlaner(QMainWindow):
 
     def ConfigureSemesters(self):
         self.semestersModels = {}
+        scrollArea = QScrollArea()
+        scrollArea.setWidgetResizable(True)
+
         semesterWidget = QWidget()
         semesterLayout = QGridLayout(parent=semesterWidget)
         self.mainSpliter.addWidget(semesterWidget)
@@ -126,9 +129,18 @@ class CurriculumnPlaner(QMainWindow):
 
         self.AddSemester("Senior Fall", semesterLayout, 3, 0)
         self.AddSemester("Senior Spring", semesterLayout, 3, 1)
+        # self.AddSemester("Senior Summer", semesterLayout, 3, 2)
+
+        # self.AddSemester("Graudate Freshman Fall", semesterLayout, 4, 0)
+        # self.AddSemester("Graudate Freshman Spring", semesterLayout, 4, 1)
+        # self.AddSemester("Graudate Freshman Summer", semesterLayout, 4, 2)
+
+        # self.AddSemester("Graudate Senior Fall", semesterLayout, 5, 0)
+        # self.AddSemester("Graudate Senior Spring", semesterLayout, 5, 1)
+        # self.AddSemester("Graudate Senior Summer", semesterLayout, 5, 2)
 
         self.totalCreditLabel = QLabel("")
-        semesterLayout.addWidget(self.totalCreditLabel, 3, 2)
+        semesterLayout.addWidget(self.totalCreditLabel, 6, 2)
 
         for semesterModel in self.semestersModels.values():
             semesterModel: CourseListModel = semesterModel
