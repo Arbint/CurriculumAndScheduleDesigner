@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QListView, QLabel, QMenu
-from PySide6.QtCore import Qt, QModelIndex, QPoint, Signal
+from PySide6.QtCore import Qt, QModelIndex, QPoint, Signal, QSize
 from PySide6.QtGui import QAction
 from CourseConfigureWidget import CourseConfigureWidget
 from CourseList import CourseListModel
@@ -18,7 +18,8 @@ class CouresListView(QListView):
 
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.ShowContextMenu)
-
+        self.minHeight = 150
+        
     def ShowContextMenu(self, position: QPoint):
         index = self.indexAt(position)
         if index.isValid():
@@ -50,6 +51,15 @@ class CouresListView(QListView):
 
     def DeleteCourse(self, courseIndex):
         self.model().removeRow(courseIndex.row(), QModelIndex())
+
+    def AdjustHeight(self):
+        if self.model() is not None and self.model().rowCount() > 0:
+            newHeight = 0
+            for i in range(self.model().rowCount()):
+                rowHeight = self.sizeHintForRow(i)
+                newHeight += rowHeight * 1.2
+
+            self.setFixedHeight(newHeight if newHeight > self.minHeight else self.minHeight)
 
 
 class CourseListViewGroup(QWidget):
@@ -96,6 +106,7 @@ class CourseListViewGroup(QWidget):
 
     def ModelUpdated(self):
         self.UpdateCredits()
+        self.listView.AdjustHeight()
 
     def UpdateCredits(self):
         self.totalCreditsLabel.setText(f"Total Credits: {self.courseListModel.GetTotalCredits()}")
