@@ -1,5 +1,6 @@
 import os
 import json
+from degreeplaner.PathUtility import GetPrjDir
 
 class Course:
     def __init__(self, departPrefix = "ANGD", courseNumber = 4399, courseName="ST: Dummy", finished = False, note = ""):
@@ -103,8 +104,7 @@ class Course:
     @staticmethod
     def GetAllCourses():
         courses = []
-        srcPath = os.path.dirname(os.path.abspath(__file__))
-        prjPath = os.path.dirname(srcPath)
+        prjPath = GetPrjDir()
         dataPath = os.path.join(prjPath, "data", "data.json")
 
         with open (dataPath, 'r') as file:

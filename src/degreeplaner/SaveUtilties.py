@@ -1,6 +1,6 @@
 import json
 import os
-from CourseList import CourseListModel
+from degreeplaner.CourseList import CourseListModel
 
 def ConvertModelsToJson(models: list[CourseListModel]):
     data = {}

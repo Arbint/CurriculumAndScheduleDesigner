@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QWidget, QGridLayout, QLineEdit, QLabel, QPushButton, QCheckBox, QTextEdit
 from PySide6.QtCore import Signal, Qt
 from PySide6.QtGui import QIntValidator
-from Course import Course
+from degreeplaner.Course import Course
 
 class CourseConfigureWidget(QWidget):
     onAddCourse = Signal(str, int, str, bool, str) 

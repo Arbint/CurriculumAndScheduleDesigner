@@ -1,9 +1,9 @@
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QListView, QLabel, QMenu
 from PySide6.QtCore import Qt, QModelIndex, QPoint, Signal, QSize
 from PySide6.QtGui import QAction
-from CourseConfigureWidget import CourseConfigureWidget
-from CourseList import CourseListModel
-from Course import Course
+from degreeplaner.CourseConfigureWidget import CourseConfigureWidget
+from degreeplaner.CourseList import CourseListModel
+from degreeplaner.Course import Course
 
 class CouresListView(QListView):
     courseDuplicated = Signal(Course)

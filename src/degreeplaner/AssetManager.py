@@ -1,4 +1,4 @@
-import PathUtility
+import degreeplaner.PathUtility as PathUtility
 import os
 
 def GetFinishedIcon():

@@ -1,7 +1,7 @@
-from Course import Course
+from degreeplaner.Course import Course
+import degreeplaner.AssetManager as AssetManager
 from PySide6.QtCore import QAbstractListModel, Qt, QModelIndex, QMimeData, Signal 
 from PySide6.QtGui import QImage
-import AssetManager
 import pickle
 
 class CourseListModel(QAbstractListModel):

@@ -1,13 +1,13 @@
 from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QHBoxLayout, QVBoxLayout, QGridLayout, QFileDialog, QLabel, QLineEdit, QPushButton, QSplitter, QScrollArea
 from PySide6.QtGui import QAction, QIntValidator
 from PySide6.QtCore import Qt, Signal
-from CourseListWidget import CourseListViewGroup
-from CourseConfigureWidget import CourseConfigureWidget
-from CourseList import CourseListModel
-from Course import Course
-from SearchCourseWidget import SearchCourseWidget
+from degreeplaner.CourseListWidget import CourseListViewGroup
+from degreeplaner.CourseConfigureWidget import CourseConfigureWidget
+from degreeplaner.CourseList import CourseListModel
+from degreeplaner.Course import Course
+from degreeplaner.SearchCourseWidget import SearchCourseWidget
+import degreeplaner.SaveUtilties as SaveUtilties
 import os
-import SaveUtilties
 
 class CurriculumnPlaner(QMainWindow):
     def __init__(self):
@@ -164,9 +164,13 @@ class CurriculumnPlaner(QMainWindow):
     def GetFinishedClassesNameStr(self):
         return "Finished Classes"
 
-if __name__ == "__main__":
+
+def main():
     app = QApplication()
     planer = CurriculumnPlaner()
     planer.show()
     app.exec()
 
+if __name__ == "__main__":
+    print("Calling Main")
+    main()
