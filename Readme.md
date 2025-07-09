@@ -11,4 +11,10 @@
 * Save to CSV
 * View Online
 
+if using poetry, can launch the main program by doing: 
+
+```
+poetry run planer
+```
+
 # Scheduler
