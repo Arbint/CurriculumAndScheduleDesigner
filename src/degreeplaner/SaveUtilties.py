@@ -1,6 +1,7 @@
 import json
 import os
 from degreeplaner.CourseList import CourseListModel
+from degreeplaner.PathUtility import GetPrjDir
 
 def ConvertModelsToJson(models: list[CourseListModel]):
     data = {}
@@ -21,3 +22,6 @@ def SaveModelsToJson(models: list[CourseListModel], savePath):
 def SaveToJson(jsonDict, savePath):
     with open(savePath, "w") as jsonFile:
         json.dump(jsonDict, jsonFile, indent=4)
+
+def GetDefaultSaveDir():
+    return os.path.join(GetPrjDir(), "saves")

@@ -7,7 +7,6 @@ from degreeplaner.CourseList import CourseListModel
 from degreeplaner.Course import Course
 from degreeplaner.SearchCourseWidget import SearchCourseWidget
 import degreeplaner.SaveUtilties as SaveUtilties
-import os
 
 class CurriculumnPlaner(QMainWindow):
     def __init__(self):
@@ -62,18 +61,12 @@ class CurriculumnPlaner(QMainWindow):
         addCourseWidget.onAddCourse.connect(self.allClassModel.AddNewCourse)
 
     def SaveFile(self):
-        savePath, selectedFilter = QFileDialog().getSaveFileName(self, "Save File", self.GetDefaultSaveDir(), self.GetSaveFileFilters())
+        savePath, selectedFilter = QFileDialog().getSaveFileName(self, "Save File", SaveUtilties.GetDefaultSaveDir(), self.GetSaveFileFilters())
         SaveUtilties.SaveModelsToJson(self.models.values(), savePath)
-
-    def GetDefaultSaveDir(self):
-        srcDir = os.path.dirname(__file__)
-        prjDir = os.path.dirname(srcDir)
-        saveDir = os.path.join(prjDir, "saves")
-        return saveDir
 
 
     def LoadFile(self):
-        loadPath, _ = QFileDialog().getOpenFileName(self, "Load File", self.GetDefaultSaveDir(), self.GetSaveFileFilters())
+        loadPath, _ = QFileDialog().getOpenFileName(self, "Load File", SaveUtilties.GetDefaultSaveDir(), self.GetSaveFileFilters())
         loadedModelDict = SaveUtilties.LoadJsonDictFromPath(loadPath)
         for loadedModelName, courseList in loadedModelDict.items():
             foundModel = self.models[loadedModelName]
