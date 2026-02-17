@@ -47,7 +47,7 @@ class CouresListView(QListView):
         configureWidget.onConfigureCourse.connect(self.CourseConfigured)
 
     def CourseConfigured(self):
-        self.model().layoutChanged()
+        self.model().layoutChanged.emit()
 
     def DeleteCourse(self, courseIndex):
         self.model().removeRow(courseIndex.row(), QModelIndex())
