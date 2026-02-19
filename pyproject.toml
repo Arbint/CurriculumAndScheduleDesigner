@@ -24,3 +24,4 @@ planer="degreeplaner.CurriculumPlaner:main"
 
 [tool.poetry.dependencies]
 pyside6 = "^6.10.1"
+openpyxl = "^3.1"

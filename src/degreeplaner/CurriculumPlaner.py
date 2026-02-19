@@ -40,6 +40,10 @@ class CurriculumnPlaner(QMainWindow):
         loadAction.triggered.connect(self.LoadFile)
         fileMenu.addAction(loadAction)
 
+        exportExcelAction = QAction("Export to Excel", self)
+        exportExcelAction.triggered.connect(self.ExportToExcel)
+        fileMenu.addAction(exportExcelAction)
+
         addCourseAction = QAction("Add Course", self)
         addCourseAction.triggered.connect(self.AddCourse)
         fileMenu.addAction(addCourseAction)
@@ -64,6 +68,11 @@ class CurriculumnPlaner(QMainWindow):
         savePath, selectedFilter = QFileDialog().getSaveFileName(self, "Save File", SaveUtilties.GetDefaultSaveDir(), self.GetSaveFileFilters())
         SaveUtilties.SaveModelsToJson(self.models.values(), savePath)
 
+
+    def ExportToExcel(self):
+        savePath, _ = QFileDialog().getSaveFileName(self, "Export to Excel", SaveUtilties.GetDefaultSaveDir(), "Excel Files (*.xlsx)")
+        if savePath:
+            SaveUtilties.ExportModelsToExcel(self.models.values(), savePath)
 
     def LoadFile(self):
         loadPath, _ = QFileDialog().getOpenFileName(self, "Load File", SaveUtilties.GetDefaultSaveDir(), self.GetSaveFileFilters())
