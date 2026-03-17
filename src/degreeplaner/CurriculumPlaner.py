@@ -24,7 +24,7 @@ class CurriculumnPlaner(QMainWindow):
         self.models = {}
         self.ConfigureAllClassList()
         self.ConfigureSemesters()
-        self.ConfigureFinishedClassList()
+        self.ConfigureFinishedAndSubstitutionsPanel()
 
         self.mainSpliter.setSizes([400,1000,400])
         
@@ -94,12 +94,20 @@ class CurriculumnPlaner(QMainWindow):
         self.mainSpliter.addWidget(self.allClassListViewGrp)
         self.models[self.GetAllClassesNameStr()] = self.allClassModel
 
-    def ConfigureFinishedClassList(self):
+    def ConfigureFinishedAndSubstitutionsPanel(self):
+        container = QWidget()
+        layout = QVBoxLayout(container)
+        layout.setContentsMargins(0, 0, 0, 0)
+        self.ConfigureFinishedClassList(layout)
+        self.ConfigureSubstitutionsList(layout)
+        self.mainSpliter.addWidget(container)
+
+    def ConfigureFinishedClassList(self, parentLayout: QVBoxLayout):
         self.finishedClassListGrp = CourseListViewGroup()
         self.finishedClassListModel = CourseListModel([], self.GetFinishedClassesNameStr())
         self.finishedClassListGrp.BindModel(self.finishedClassListModel)
-        self.mainSpliter.addWidget(self.finishedClassListGrp)
-        self.models[self.GetFinishedClassesNameStr()] = self.finishedClassListModel       
+        parentLayout.addWidget(self.finishedClassListGrp)
+        self.models[self.GetFinishedClassesNameStr()] = self.finishedClassListModel
         self.finishedClassListModel.layoutChanged.connect(self.UpdateTotoalCredits)
 
     def AddSemester(self, name: str, parentGrid: QGridLayout, x, y, semesterCourses : list[Course] = None):
@@ -158,13 +166,25 @@ class CurriculumnPlaner(QMainWindow):
             semesterModel: CourseListModel = semesterModel
             credits += semesterModel.GetTotalCredits()
         credits += self.finishedClassListModel.GetTotalCredits()
+        credits += self.substitutionsListModel.GetTotalCredits()
         self.totalCreditLabel.setText(f"total credits: {credits}")
 
     def GetAllClassesNameStr(self):
         return "All Classes"
 
+    def ConfigureSubstitutionsList(self, parentLayout: QVBoxLayout):
+        self.substitutionsListGrp = CourseListViewGroup()
+        self.substitutionsListModel = CourseListModel([], self.GetSubstitutionsNameStr())
+        self.substitutionsListGrp.BindModel(self.substitutionsListModel)
+        parentLayout.addWidget(self.substitutionsListGrp)
+        self.models[self.GetSubstitutionsNameStr()] = self.substitutionsListModel
+        self.substitutionsListModel.layoutChanged.connect(self.UpdateTotoalCredits)
+
     def GetFinishedClassesNameStr(self):
         return "Finished Classes"
+
+    def GetSubstitutionsNameStr(self):
+        return "Substitutions"
 
 
 def main():
