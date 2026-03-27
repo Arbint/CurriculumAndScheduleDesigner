@@ -3,7 +3,7 @@ import os
 from degreeplaner.CourseList import CourseListModel
 from degreeplaner.PathUtility import GetPrjDir
 import openpyxl
-from openpyxl.styles import Font
+from openpyxl.styles import Font, PatternFill, Alignment
 
 def ConvertModelsToJson(models: list[CourseListModel]):
     data = {}
@@ -36,14 +36,22 @@ def ExportModelsToExcel(models, savePath):
     ws.title = "Degree Plan"
 
     bold = Font(bold=True)
+    headerFill = PatternFill(start_color="D3D3D3", end_color="D3D3D3", fill_type="solid")
     grandTotal = 0
 
     for model in models:
         if model.listName in SKIP_MODELS:
             continue
+        if not model.courses:
+            continue
 
         ws.append([model.listName])
-        ws[f"A{ws.max_row}"].font = bold
+        headerRow = ws.max_row
+        ws.merge_cells(f"A{headerRow}:D{headerRow}")
+        cell = ws[f"A{headerRow}"]
+        cell.font = bold
+        cell.fill = headerFill
+        cell.alignment = Alignment(horizontal="center")
 
         semesterCredits = 0
         for course in model.courses:
