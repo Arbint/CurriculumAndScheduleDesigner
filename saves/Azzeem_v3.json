@@ -78,9 +78,16 @@
             "note": ""
         },
         {
+            "departmentPrefix": "COMM",
+            "courseNumber": 2320,
+            "courseName": "Audio Production I",
+            "finished": false,
+            "note": ""
+        },
+        {
             "departmentPrefix": "ANGD",
-            "courseNumber": 4340,
-            "courseName": "Senior Thesis Production I",
+            "courseNumber": 4150,
+            "courseName": "Sr Thesis Production Management I",
             "finished": false,
             "note": ""
         },
@@ -92,28 +99,14 @@
             "note": ""
         },
         {
-            "departmentPrefix": "COMM",
-            "courseNumber": 2320,
-            "courseName": "Audio Production I",
-            "finished": false,
-            "note": ""
-        },
-        {
             "departmentPrefix": "ANGD",
-            "courseNumber": 4350,
-            "courseName": "Senior Thesis Production II",
+            "courseNumber": 4151,
+            "courseName": "Sr Thesis Production Management II",
             "finished": false,
             "note": ""
         }
     ],
     "Freshman Fall": [
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1312,
-            "courseName": "Hard Surface Modeling",
-            "finished": false,
-            "note": ""
-        },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 1315,
@@ -122,30 +115,23 @@
             "note": ""
         },
         {
-            "departmentPrefix": "MATH",
-            "courseNumber": 1304,
-            "courseName": "College Algebra",
-            "finished": false,
-            "note": ""
-        },
-        {
             "departmentPrefix": "ENGL",
+            "courseNumber": 1312,
+            "courseName": "Composition II",
+            "finished": false,
+            "note": "Take in SAC"
+        },
+        {
+            "departmentPrefix": "--THAR",
+            "courseNumber": 1321,
+            "courseName": "Beginning Acting",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "HIST",
             "courseNumber": 1311,
-            "courseName": "Composition I",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "FYES",
-            "courseNumber": 1211,
-            "courseName": "First Year Experience Seminar",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1101,
-            "courseName": "Orientation to ANGD",
+            "courseName": "World History I",
             "finished": false,
             "note": ""
         }
@@ -159,23 +145,16 @@
             "note": ""
         },
         {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1302,
-            "courseName": "Elements of Design Seminar",
+            "departmentPrefix": "--THAR",
+            "courseNumber": 4399,
+            "courseName": "Play Writting",
             "finished": false,
             "note": ""
         },
         {
-            "departmentPrefix": "ENGL",
-            "courseNumber": 1312,
-            "courseName": "Composition II",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "COMM",
-            "courseNumber": 1302,
-            "courseName": "Media Literacy",
+            "departmentPrefix": "PSYC",
+            "courseNumber": 1301,
+            "courseName": "Intro to Psycology",
             "finished": false,
             "note": ""
         },
@@ -187,7 +166,15 @@
             "note": ""
         }
     ],
-    "Freshman Summer": [],
+    "Freshman Summer": [
+        {
+            "departmentPrefix": "CHIN",
+            "courseNumber": 1311,
+            "courseName": "Chinese or Other LANG I(3 hours)",
+            "finished": false,
+            "note": "Take in SAC"
+        }
+    ],
     "Sophmore Fall": [
         {
             "departmentPrefix": "ANGD",
@@ -211,16 +198,16 @@
             "note": ""
         },
         {
-            "departmentPrefix": "ENGL",
-            "courseNumber": 3375,
-            "courseName": "Creative Writing",
+            "departmentPrefix": "--THAR",
+            "courseNumber": 1191,
+            "courseName": "Theatre Practicum",
             "finished": false,
             "note": ""
         },
         {
-            "departmentPrefix": "RELS",
-            "courseNumber": 1300,
-            "courseName": "Any 1000 level RELS course",
+            "departmentPrefix": "ENGL",
+            "courseNumber": 2310,
+            "courseName": "World Literature Studies",
             "finished": false,
             "note": ""
         },
@@ -255,16 +242,9 @@
             "note": ""
         },
         {
-            "departmentPrefix": "COMM",
-            "courseNumber": 1311,
-            "courseName": "Public Speaking",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "PHIL",
-            "courseNumber": 1381,
-            "courseName": "Introduction to Philosophy",
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1312,
+            "courseName": "Hard Surface Modeling",
             "finished": false,
             "note": ""
         },
@@ -276,7 +256,36 @@
             "note": ""
         }
     ],
-    "Sophmore Summer": [],
+    "Sophmore Summer": [
+        {
+            "departmentPrefix": "PHYS",
+            "courseNumber": 1301,
+            "courseName": "General Physics",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "PHYS",
+            "courseNumber": 1101,
+            "courseName": "General Physics Laboratory I",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "RELS",
+            "courseNumber": 1300,
+            "courseName": "Any 1000 level RELS course",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "CHIN",
+            "courseNumber": 1312,
+            "courseName": "Chinese II or Other LANG II",
+            "finished": false,
+            "note": ""
+        }
+    ],
     "Junior Fall": [
         {
             "departmentPrefix": "ANGD",
@@ -300,18 +309,18 @@
             "note": ""
         },
         {
-            "departmentPrefix": "HIST",
-            "courseNumber": 1311,
-            "courseName": "World History I",
+            "departmentPrefix": "--THAR",
+            "courseNumber": 3382,
+            "courseName": "Theatre History II",
             "finished": false,
-            "note": ""
+            "note": "Not dependent on Theatre History I"
         },
         {
-            "departmentPrefix": "RELS 4399 or PHIL 3375 or PHIL 3370",
-            "courseNumber": 4399,
-            "courseName": "Sared Spaces or Aesthetics or Phil of Science & Technology",
+            "departmentPrefix": "--THAR",
+            "courseNumber": 1191,
+            "courseName": "Theatre Practicum",
             "finished": false,
-            "note": ""
+            "note": "Can repeat for credit"
         },
         {
             "departmentPrefix": "ANGD",
@@ -337,13 +346,6 @@
             "note": ""
         },
         {
-            "departmentPrefix": "ENGL",
-            "courseNumber": 2310,
-            "courseName": "World Literature Studies",
-            "finished": false,
-            "note": ""
-        },
-        {
             "departmentPrefix": "ANGD",
             "courseNumber": 3352,
             "courseName": "Production Management IV",
@@ -358,6 +360,20 @@
             "note": ""
         },
         {
+            "departmentPrefix": "--THAR",
+            "courseNumber": 3381,
+            "courseName": "Theatre History I",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "--THAR",
+            "courseNumber": 4399,
+            "courseName": "Electives",
+            "finished": false,
+            "note": ""
+        },
+        {
             "departmentPrefix": "ANGD",
             "courseNumber": 4100,
             "courseName": "Animation Industry Seminar",
@@ -365,36 +381,30 @@
             "note": ""
         }
     ],
-    "Junior Summer": [],
-    "Senior Fall": [
+    "Junior Summer": [
         {
-            "departmentPrefix": "PHYS",
-            "courseNumber": 1301,
-            "courseName": "General Physics",
+            "departmentPrefix": "ENGL",
+            "courseNumber": 3375,
+            "courseName": "Creative Writing",
             "finished": false,
             "note": ""
         },
         {
-            "departmentPrefix": "PHYS",
-            "courseNumber": 1101,
-            "courseName": "General Physics Laboratory I",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 4350,
-            "courseName": "Sr Thesis Production I",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "CHIN",
+            "departmentPrefix": "COMM",
             "courseNumber": 1311,
-            "courseName": "Chinese or Other LANG I(3 hours)",
+            "courseName": "Public Speaking",
             "finished": false,
             "note": ""
         },
+        {
+            "departmentPrefix": "RELS 4399 or PHIL 3375 or PHIL 3370",
+            "courseNumber": 4399,
+            "courseName": "Sared Spaces or Aesthetics or Phil of Science & Technology",
+            "finished": false,
+            "note": ""
+        }
+    ],
+    "Senior Fall": [
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 4305,
@@ -404,8 +414,36 @@
         },
         {
             "departmentPrefix": "ANGD",
+            "courseNumber": 4340,
+            "courseName": "Senior Thesis Production I",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "--THAR",
+            "courseNumber": 1191,
+            "courseName": "Theatre Practicum",
+            "finished": false,
+            "note": "Can repeat for credit"
+        },
+        {
+            "departmentPrefix": "ANGD",
             "courseNumber": 4100,
             "courseName": "Animation Industry Seminar",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "--THAR",
+            "courseNumber": 4399,
+            "courseName": "Electives",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "--THAR",
+            "courseNumber": 4399,
+            "courseName": "Electives",
             "finished": false,
             "note": ""
         }
@@ -426,25 +464,32 @@
             "note": ""
         },
         {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 4360,
-            "courseName": "Sr Thesis Production II",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "CHIN",
-            "courseNumber": 1312,
-            "courseName": "Chinese II or Other LANG II",
-            "finished": false,
-            "note": ""
-        },
-        {
             "departmentPrefix": "PEHP",
             "courseNumber": 1111,
             "courseName": "Physical Activity Course",
             "finished": false,
             "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 4350,
+            "courseName": "Senior Thesis Production II",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "--THAR",
+            "courseNumber": 4399,
+            "courseName": "Electives",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "--THAR",
+            "courseNumber": 1191,
+            "courseName": "Theatre Practicum",
+            "finished": false,
+            "note": "Can repeat for credit"
         },
         {
             "departmentPrefix": "ANGD",
@@ -461,6 +506,49 @@
     "Graudate Senior Fall": [],
     "Graudate Senior Spring": [],
     "Graudate Senior Summer": [],
-    "Finished Classes": [],
+    "Finished Classes": [
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1302,
+            "courseName": "Elements of Design Seminar",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "FYES",
+            "courseNumber": 1211,
+            "courseName": "First Year Experience Seminar",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ENGL",
+            "courseNumber": 1311,
+            "courseName": "Composition I",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1101,
+            "courseName": "Orientation to ANGD",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "MATH",
+            "courseNumber": 1304,
+            "courseName": "College Algebra",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "PHIL",
+            "courseNumber": 1381,
+            "courseName": "Introduction to Philosophy",
+            "finished": false,
+            "note": ""
+        }
+    ],
     "Substitutions": []
 }

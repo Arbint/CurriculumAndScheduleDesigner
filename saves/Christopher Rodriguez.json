@@ -111,42 +111,42 @@
             "departmentPrefix": "ANGD",
             "courseNumber": 1312,
             "courseName": "Hard Surface Modeling",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 1315,
             "courseName": "Principles of Animation",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "MATH",
             "courseNumber": 1304,
             "courseName": "College Algebra",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ENGL",
             "courseNumber": 1311,
             "courseName": "Composition I",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "FYES",
             "courseNumber": 1211,
             "courseName": "First Year Experience Seminar",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 1101,
             "courseName": "Orientation to ANGD",
-            "finished": false,
+            "finished": true,
             "note": ""
         }
     ],
@@ -155,35 +155,21 @@
             "departmentPrefix": "ANGD",
             "courseNumber": 1314,
             "courseName": "Organic Modeling",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1302,
-            "courseName": "Elements of Design Seminar",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ENGL",
             "courseNumber": 1312,
             "courseName": "Composition II",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "COMM",
-            "courseNumber": 1302,
-            "courseName": "Media Literacy",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 1313,
             "courseName": "Game Engines",
-            "finished": false,
+            "finished": true,
             "note": ""
         }
     ],
@@ -193,42 +179,28 @@
             "departmentPrefix": "ANGD",
             "courseNumber": 2353,
             "courseName": "Modeling & Texture Pipeline",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 2351,
             "courseName": "Production Management I",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 4384,
-            "courseName": "Element of Gameplay",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "ENGL",
-            "courseNumber": 3375,
-            "courseName": "Creative Writing",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "RELS",
             "courseNumber": 1300,
             "courseName": "Any 1000 level RELS course",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 4100,
             "courseName": "Animation Industry Seminar",
-            "finished": false,
+            "finished": true,
             "note": ""
         }
     ],
@@ -237,21 +209,14 @@
             "departmentPrefix": "ANGD",
             "courseNumber": 2355,
             "courseName": "Animation Pipeline",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 2352,
             "courseName": "Production Management II",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 4381,
-            "courseName": "Prototyping and Game Design",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
@@ -265,14 +230,14 @@
             "departmentPrefix": "PHIL",
             "courseNumber": 1381,
             "courseName": "Introduction to Philosophy",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 4100,
             "courseName": "Animation Industry Seminar",
-            "finished": false,
+            "finished": true,
             "note": ""
         }
     ],
@@ -282,42 +247,35 @@
             "departmentPrefix": "ANGD",
             "courseNumber": 3315,
             "courseName": "Visual Narrative Conventions",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 2330,
             "courseName": "History of Animation",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 3351,
             "courseName": "Production Management III",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "HIST",
-            "courseNumber": 1311,
-            "courseName": "World History I",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "RELS 4399 or PHIL 3375 or PHIL 3370",
-            "courseNumber": 4399,
-            "courseName": "Sared Spaces or Aesthetics or Phil of Science & Technology",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 4100,
             "courseName": "Animation Industry Seminar",
-            "finished": false,
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ENGL",
+            "courseNumber": 2310,
+            "courseName": "World Literature Studies",
+            "finished": true,
             "note": ""
         }
     ],
@@ -337,13 +295,6 @@
             "note": ""
         },
         {
-            "departmentPrefix": "ENGL",
-            "courseNumber": 2310,
-            "courseName": "World Literature Studies",
-            "finished": false,
-            "note": ""
-        },
-        {
             "departmentPrefix": "ANGD",
             "courseNumber": 3352,
             "courseName": "Production Management IV",
@@ -351,9 +302,9 @@
             "note": ""
         },
         {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 3355,
-            "courseName": "Tools of Production Management",
+            "departmentPrefix": "RELS 4399 or PHIL 3375 or PHIL 3370",
+            "courseNumber": 4399,
+            "courseName": "Sared Spaces or Aesthetics or Phil of Science & Technology",
             "finished": false,
             "note": ""
         },
@@ -368,30 +319,9 @@
     "Junior Summer": [],
     "Senior Fall": [
         {
-            "departmentPrefix": "PHYS",
-            "courseNumber": 1301,
-            "courseName": "General Physics",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "PHYS",
-            "courseNumber": 1101,
-            "courseName": "General Physics Laboratory I",
-            "finished": false,
-            "note": ""
-        },
-        {
             "departmentPrefix": "ANGD",
             "courseNumber": 4350,
             "courseName": "Sr Thesis Production I",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "CHIN",
-            "courseNumber": 1311,
-            "courseName": "Chinese or Other LANG I(3 hours)",
             "finished": false,
             "note": ""
         },
@@ -433,13 +363,6 @@
             "note": ""
         },
         {
-            "departmentPrefix": "CHIN",
-            "courseNumber": 1312,
-            "courseName": "Chinese II or Other LANG II",
-            "finished": false,
-            "note": ""
-        },
-        {
             "departmentPrefix": "PEHP",
             "courseNumber": 1111,
             "courseName": "Physical Activity Course",
@@ -461,6 +384,85 @@
     "Graudate Senior Fall": [],
     "Graudate Senior Spring": [],
     "Graudate Senior Summer": [],
-    "Finished Classes": [],
-    "Substitutions": []
+    "Finished Classes": [
+        {
+            "departmentPrefix": "CHIN",
+            "courseNumber": 1311,
+            "courseName": "Chinese or Other LANG I(3 hours)",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "CHIN",
+            "courseNumber": 1312,
+            "courseName": "Chinese II or Other LANG II",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "COMM",
+            "courseNumber": 1302,
+            "courseName": "Media Literacy",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "PHYS",
+            "courseNumber": 1101,
+            "courseName": "General Physics Laboratory I",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "PHYS",
+            "courseNumber": 1301,
+            "courseName": "General Physics",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "HIST",
+            "courseNumber": 1311,
+            "courseName": "World History I",
+            "finished": true,
+            "note": ""
+        }
+    ],
+    "Substitutions": [
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 4384,
+            "courseName": "Element of Gameplay",
+            "finished": true,
+            "note": "Sub COMM 1301 Intro to Mass Communication"
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 4381,
+            "courseName": "Prototyping and Game Design",
+            "finished": true,
+            "note": "Sub COMM 4315 Media Ethics"
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 3355,
+            "courseName": "Tools of Production Management",
+            "finished": true,
+            "note": "Sub COMM 2320 Audio Production I"
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1302,
+            "courseName": "Elements of Design Seminar",
+            "finished": true,
+            "note": "Sub ANGD 1102 Elements of Design SEminar"
+        },
+        {
+            "departmentPrefix": "ARTS",
+            "courseNumber": 1301,
+            "courseName": "Drawing I",
+            "finished": true,
+            "note": "Substitute with ARTS 1311 Two Dimensional Design (originally should be Creative Writting)"
+        }
+    ]
 }

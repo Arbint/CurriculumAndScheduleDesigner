@@ -109,44 +109,16 @@
     "Freshman Fall": [
         {
             "departmentPrefix": "ANGD",
-            "courseNumber": 1312,
-            "courseName": "Hard Surface Modeling",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "ANGD",
             "courseNumber": 1315,
             "courseName": "Principles of Animation",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "MATH",
-            "courseNumber": 1304,
-            "courseName": "College Algebra",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ENGL",
             "courseNumber": 1311,
             "courseName": "Composition I",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "FYES",
-            "courseNumber": 1211,
-            "courseName": "First Year Experience Seminar",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1101,
-            "courseName": "Orientation to ANGD",
-            "finished": false,
+            "finished": true,
             "note": ""
         }
     ],
@@ -155,35 +127,35 @@
             "departmentPrefix": "ANGD",
             "courseNumber": 1314,
             "courseName": "Organic Modeling",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 1302,
             "courseName": "Elements of Design Seminar",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ENGL",
             "courseNumber": 1312,
             "courseName": "Composition II",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "COMM",
             "courseNumber": 1302,
             "courseName": "Media Literacy",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1313,
-            "courseName": "Game Engines",
-            "finished": false,
+            "departmentPrefix": "CHIN",
+            "courseNumber": 1312,
+            "courseName": "Chinese II or Other LANG II",
+            "finished": true,
             "note": ""
         }
     ],
@@ -193,42 +165,49 @@
             "departmentPrefix": "ANGD",
             "courseNumber": 2353,
             "courseName": "Modeling & Texture Pipeline",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 2351,
             "courseName": "Production Management I",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 4384,
             "courseName": "Element of Gameplay",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ENGL",
             "courseNumber": 3375,
             "courseName": "Creative Writing",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
-            "departmentPrefix": "RELS",
-            "courseNumber": 1300,
-            "courseName": "Any 1000 level RELS course",
-            "finished": false,
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1101,
+            "courseName": "Orientation to ANGD",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "FYES",
+            "courseNumber": 1211,
+            "courseName": "First Year Experience Seminar",
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 4100,
             "courseName": "Animation Industry Seminar",
-            "finished": false,
+            "finished": true,
             "note": ""
         }
     ],
@@ -255,16 +234,16 @@
             "note": ""
         },
         {
-            "departmentPrefix": "COMM",
-            "courseNumber": 1311,
-            "courseName": "Public Speaking",
+            "departmentPrefix": "PHIL",
+            "courseNumber": 1381,
+            "courseName": "Introduction to Philosophy",
             "finished": false,
             "note": ""
         },
         {
-            "departmentPrefix": "PHIL",
-            "courseNumber": 1381,
-            "courseName": "Introduction to Philosophy",
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1312,
+            "courseName": "Hard Surface Modeling",
             "finished": false,
             "note": ""
         },
@@ -389,16 +368,16 @@
             "note": ""
         },
         {
-            "departmentPrefix": "CHIN",
-            "courseNumber": 1311,
-            "courseName": "Chinese or Other LANG I(3 hours)",
+            "departmentPrefix": "ANGD",
+            "courseNumber": 4305,
+            "courseName": "Senior Portfolio",
             "finished": false,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
-            "courseNumber": 4305,
-            "courseName": "Senior Portfolio",
+            "courseNumber": 1313,
+            "courseName": "Game Engines",
             "finished": false,
             "note": ""
         },
@@ -433,16 +412,16 @@
             "note": ""
         },
         {
-            "departmentPrefix": "CHIN",
-            "courseNumber": 1312,
-            "courseName": "Chinese II or Other LANG II",
+            "departmentPrefix": "PEHP",
+            "courseNumber": 1111,
+            "courseName": "Physical Activity Course",
             "finished": false,
             "note": ""
         },
         {
-            "departmentPrefix": "PEHP",
-            "courseNumber": 1111,
-            "courseName": "Physical Activity Course",
+            "departmentPrefix": "COMM",
+            "courseNumber": 1311,
+            "courseName": "Public Speaking",
             "finished": false,
             "note": ""
         },
@@ -461,6 +440,29 @@
     "Graudate Senior Fall": [],
     "Graudate Senior Spring": [],
     "Graudate Senior Summer": [],
-    "Finished Classes": [],
-    "Substitutions": []
+    "Finished Classes": [
+        {
+            "departmentPrefix": "CHIN",
+            "courseNumber": 1311,
+            "courseName": "Chinese or Other LANG I(3 hours)",
+            "finished": true,
+            "note": ""
+        }
+    ],
+    "Substitutions": [
+        {
+            "departmentPrefix": "RELS",
+            "courseNumber": 1300,
+            "courseName": "Any 1000 level RELS course",
+            "finished": false,
+            "note": "Can we sub with CBT110 Old Testament Survey"
+        },
+        {
+            "departmentPrefix": "MATH",
+            "courseNumber": 1304,
+            "courseName": "College Algebra",
+            "finished": false,
+            "note": "Sub with MAT 115 Intermediate Algebra, why big x on the transcript?"
+        }
+    ]
 }

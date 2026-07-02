@@ -248,13 +248,6 @@
             "note": ""
         },
         {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 4381,
-            "courseName": "Prototyping and Game Design",
-            "finished": false,
-            "note": ""
-        },
-        {
             "departmentPrefix": "COMM",
             "courseNumber": 1311,
             "courseName": "Public Speaking",
@@ -303,13 +296,6 @@
             "departmentPrefix": "HIST",
             "courseNumber": 1311,
             "courseName": "World History I",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "RELS 4399 or PHIL 3375 or PHIL 3370",
-            "courseNumber": 4399,
-            "courseName": "Sared Spaces or Aesthetics or Phil of Science & Technology",
             "finished": false,
             "note": ""
         },
@@ -368,45 +354,38 @@
     "Junior Summer": [],
     "Senior Fall": [
         {
-            "departmentPrefix": "PHYS",
-            "courseNumber": 1301,
-            "courseName": "General Physics",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "PHYS",
-            "courseNumber": 1101,
-            "courseName": "General Physics Laboratory I",
-            "finished": false,
-            "note": ""
-        },
-        {
             "departmentPrefix": "ANGD",
             "courseNumber": 4350,
             "courseName": "Sr Thesis Production I",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "CHIN",
-            "courseNumber": 1311,
-            "courseName": "Chinese or Other LANG I(3 hours)",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 4305,
             "courseName": "Senior Portfolio",
-            "finished": false,
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "PEHP",
+            "courseNumber": 1111,
+            "courseName": "Physical Activity Course",
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 4100,
             "courseName": "Animation Industry Seminar",
-            "finished": false,
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "RELS 4399 or PHIL 3375 or PHIL 3370",
+            "courseNumber": 4399,
+            "courseName": "Sared Spaces or Aesthetics or Phil of Science & Technology",
+            "finished": true,
             "note": ""
         }
     ],
@@ -415,42 +394,35 @@
             "departmentPrefix": "ANGD",
             "courseNumber": 4340,
             "courseName": "Business of Animation and Game Design",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "COMM",
             "courseNumber": 4332,
             "courseName": "Law and the Media",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 4360,
             "courseName": "Sr Thesis Production II",
-            "finished": false,
+            "finished": true,
             "note": ""
         },
         {
-            "departmentPrefix": "CHIN",
-            "courseNumber": 1312,
-            "courseName": "Chinese II or Other LANG II",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "PEHP",
-            "courseNumber": 1111,
-            "courseName": "Physical Activity Course",
-            "finished": false,
+            "departmentPrefix": "ANGD",
+            "courseNumber": 4381,
+            "courseName": "Prototyping and Game Design",
+            "finished": true,
             "note": ""
         },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 4100,
             "courseName": "Animation Industry Seminar",
-            "finished": false,
+            "finished": true,
             "note": ""
         }
     ],
@@ -461,6 +433,35 @@
     "Graudate Senior Fall": [],
     "Graudate Senior Spring": [],
     "Graudate Senior Summer": [],
-    "Finished Classes": [],
+    "Finished Classes": [
+        {
+            "departmentPrefix": "CHIN",
+            "courseNumber": 1312,
+            "courseName": "Chinese II or Other LANG II",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "PHYS",
+            "courseNumber": 1301,
+            "courseName": "General Physics",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "PHYS",
+            "courseNumber": 1101,
+            "courseName": "General Physics Laboratory I",
+            "finished": true,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "CHIN",
+            "courseNumber": 1311,
+            "courseName": "Chinese or Other LANG I(3 hours)",
+            "finished": true,
+            "note": ""
+        }
+    ],
     "Substitutions": []
 }

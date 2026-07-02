@@ -155,107 +155,14 @@
             "note": "or ANGD 3372 Game Engine Systems"
         }
     ],
-    "Freshman Fall": [
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1312,
-            "courseName": "Hard Surface Modeling",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1314,
-            "courseName": "Organic Modeling",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "MATH",
-            "courseNumber": 1304,
-            "courseName": "College Algebra",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "ENGL",
-            "courseNumber": 1311,
-            "courseName": "Composition I",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "FYES",
-            "courseNumber": 1211,
-            "courseName": "First Year Experience Seminar",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1101,
-            "courseName": "Orientation to ANGD",
-            "finished": false,
-            "note": ""
-        }
-    ],
-    "Freshman Spring": [
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1315,
-            "courseName": "Principles of Animation",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1302,
-            "courseName": "Elements of Design Seminar",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "ENGL",
-            "courseNumber": 1312,
-            "courseName": "Composition II",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "COMM",
-            "courseNumber": 1302,
-            "courseName": "Media Literacy",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 1313,
-            "courseName": "Game Engines",
-            "finished": false,
-            "note": ""
-        }
-    ],
+    "Freshman Fall": [],
+    "Freshman Spring": [],
     "Freshman Summer": [],
     "Sophmore Fall": [
-        {
-            "departmentPrefix": "ENGL",
-            "courseNumber": 3375,
-            "courseName": "Creative Writing",
-            "finished": false,
-            "note": ""
-        },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 4100,
             "courseName": "Animation Industry Seminar",
-            "finished": false,
-            "note": ""
-        },
-        {
-            "departmentPrefix": "ANGD",
-            "courseNumber": 2321,
-            "courseName": "Technical Direction",
             "finished": false,
             "note": ""
         },
@@ -275,6 +182,27 @@
         },
         {
             "departmentPrefix": "ANGD",
+            "courseNumber": 1314,
+            "courseName": "Organic Modeling",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "FYES",
+            "courseNumber": 1211,
+            "courseName": "First Year Experience Seminar",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1101,
+            "courseName": "Orientation to ANGD",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
             "courseNumber": 1380,
             "courseName": "Anatomy for Animators",
             "finished": false,
@@ -282,13 +210,6 @@
         }
     ],
     "Sophmore Spring": [
-        {
-            "departmentPrefix": "PHIL",
-            "courseNumber": 1381,
-            "courseName": "Introduction to Philosophy",
-            "finished": false,
-            "note": ""
-        },
         {
             "departmentPrefix": "ANGD",
             "courseNumber": 4100,
@@ -314,6 +235,13 @@
             "departmentPrefix": "RELS",
             "courseNumber": 1300,
             "courseName": "Any 1000 level RELS course",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1302,
+            "courseName": "Elements of Design Seminar",
             "finished": false,
             "note": ""
         },
@@ -452,6 +380,13 @@
             "note": ""
         },
         {
+            "departmentPrefix": "ENGL",
+            "courseNumber": 3375,
+            "courseName": "Creative Writing",
+            "finished": false,
+            "note": ""
+        },
+        {
             "departmentPrefix": "CHEM",
             "courseNumber": 1308,
             "courseName": "or BIOL/PHYS",
@@ -475,13 +410,6 @@
             "note": ""
         },
         {
-            "departmentPrefix": "HIST",
-            "courseNumber": 1311,
-            "courseName": "World History I",
-            "finished": false,
-            "note": ""
-        },
-        {
             "departmentPrefix": "CHIN",
             "courseNumber": 1312,
             "courseName": "Chinese II or Other LANG II",
@@ -492,6 +420,13 @@
             "departmentPrefix": "PEHP",
             "courseNumber": 1111,
             "courseName": "Physical Activity Course",
+            "finished": false,
+            "note": ""
+        },
+        {
+            "departmentPrefix": "COMM",
+            "courseNumber": 1302,
+            "courseName": "Media Literacy",
             "finished": false,
             "note": ""
         },
@@ -510,6 +445,70 @@
     "Graudate Senior Fall": [],
     "Graudate Senior Spring": [],
     "Graudate Senior Summer": [],
-    "Finished Classes": [],
+    "Finished Classes": [
+        {
+            "departmentPrefix": "ENGL",
+            "courseNumber": 1312,
+            "courseName": "Composition II",
+            "finished": true,
+            "note": "Sub with ENGL 1302 Composition II from NVC"
+        },
+        {
+            "departmentPrefix": "HIST",
+            "courseNumber": 1311,
+            "courseName": "World History I",
+            "finished": true,
+            "note": "Sub the history credit with HIST 1301 United States History I from NVC"
+        },
+        {
+            "departmentPrefix": "PHIL",
+            "courseNumber": 1381,
+            "courseName": "Introduction to Philosophy",
+            "finished": true,
+            "note": "sub with PHIL 1301 Introductioin ot Philosophy from NVC"
+        },
+        {
+            "departmentPrefix": "MATH",
+            "courseNumber": 1304,
+            "courseName": "College Algebra",
+            "finished": true,
+            "note": "sub with MATH 1314 College Algebra from NVC"
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1312,
+            "courseName": "Hard Surface Modeling",
+            "finished": true,
+            "note": "sub with ARTV 1345 3-D Modeling and Rendering I from NVC"
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1315,
+            "courseName": "Principles of Animation",
+            "finished": true,
+            "note": "sub with ARTV 1341 3-D Animation I"
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 1313,
+            "courseName": "Game Engines",
+            "finished": true,
+            "note": "sub with GAME 2349 Game/Simulation Group Project from NVC"
+        },
+        {
+            "departmentPrefix": "ANGD",
+            "courseNumber": 2321,
+            "courseName": "Technical Direction",
+            "finished": true,
+            "note": "sub with ARTV 2355 Character Rigging & Animation from NVC"
+        },
+        {
+            "departmentPrefix": "ENGL",
+            "courseNumber": 1311,
+            "courseName": "Composition I",
+            "finished": true,
+            "note": "Sub with ENGL 1301 Composition I form NVC"
+        }
+    ],
     "Substitutions": []
 }
